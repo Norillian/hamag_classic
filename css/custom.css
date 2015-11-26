@@ -3,7 +3,8 @@
 a,
 input,
 span,
-h1,h2,h3,h4,p, label {
+h1,h2,h3,h4,p, label,
+.searchContent #ucInfoMessagebdy {
     font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -308,6 +309,20 @@ a.homeButton i {
 #ShopContent .plistAreaHeader > div .prelement {
     width: 33.33%;
     text-align: center;
+}
+
+.searchContent #ShopContent .plistAreaHeader > div .prelement {
+    width: 25%;
+}
+
+.searchContent #ucInfoMessagebdy {
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 77px;
+    padding-left: 10px;
+    border: 1px solid #d0cfcf;
+    border-top: medium none;
 }
 
 #ShopContent .plistAreaHeader > div .prelement .prmain {
