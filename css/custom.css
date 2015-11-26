@@ -130,6 +130,7 @@ a.homeButton i {
     background-position: 0 0;
     text-align: center;
     margin: 0px !important;
+    cursor: pointer;
 }
 
 #main #SearchBoxbdy input.textbox {
