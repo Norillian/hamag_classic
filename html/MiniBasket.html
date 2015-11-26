@@ -1,0 +1,13 @@
+<div class="miniBasketBdy">
+    <a href="/basket/shoppingcart.aspx">
+        <img src="/images/editor/images/basketBag.png" alt="basketBag" />
+        <span class="miniBasketItemCount">
+            <eSeller:Select Value-Of="Basket:ItemCount" />
+        </span>
+        <span class="miniBasketText left">
+            <span class="miniBasketHeading"><eSeller:Select text="label_basketHeading" /></span>
+            <eSeller:Select text="label_total" /><eSeller:Select Value-Of="Basket:TotalAmountFormatted" />&amp;nbsp;<eSeller:Select Value-Of="Basket:CurrencySymbol" /><eSeller:Select text="label_miniBasketText" />
+        </span>
+        <div style="clear:both"></div>
+    </a>
+</div>

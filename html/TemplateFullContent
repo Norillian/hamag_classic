@@ -1,0 +1,32 @@
+<div id="outerBdy">
+    <div class="inner-wrap">
+        <div id="main">
+            <div id="mainInnerBdy">
+                <div class="topMenuOuterBdy clearfix">
+                    <div id="BroadTopMenu">
+                        <eSeller:Container ContainerName="BroadTopMenu" CssId="#BroadTopMenu" />
+                    </div>
+                    <div id="topbanner">
+                        <a href="/">
+                            <img src="/images/editor/images/banner.png" alt="forsiden" />
+                        </a>
+                    </div>
+                    <div id="rightTop">
+                        <eSeller:Container ContainerName="rightTop" CssId="#rightTop" />
+                    </div>
+                    <div id="topMenu">
+                        <eSeller:Container ContainerName="topMenu" CssId="#topMenu" />
+                    </div>
+                </div>
+                <div class="contentOuterBdy fullcontentBdy">
+                    <div class="contentPane">
+                        <eSeller:Content ContainerName="content" CssId=".contentPane" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <eSeller:Container ContainerName="bottomPane" CssId="#bottom" ContainerType="ShopBottom" AllowShopElements="True" />
+    </div>
+</div>

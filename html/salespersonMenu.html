@@ -1,0 +1,18 @@
+<div class="salespersonMenuBdy">
+    <div class="salespersonMenuInnerBdy">
+        <eSeller:if istrue="Settings:IsCustomerLoggedIn">
+            <span>
+                <eSeller:Select text="label_salesperson_header" /><br />
+                <b><eSeller:Select Value-Of="CustomerLogin:Name" /></b>
+            </span>
+            <a href="#">
+                <i class="fa fa-user"></i> <eSeller:Select text="label_salesperson_lnk_text" />
+            </a>
+        </eSeller:if>
+        <eSeller:if isfalse="Settings:IsCustomerLoggedIn">
+            <a href="/customers/customer_login.aspx">
+                <i class="fa fa-lock"></i> <eSeller:Select text="label_salesperson_lnk_text_login" />
+            </a>
+        </eSeller:if>
+    </div>
+</div>

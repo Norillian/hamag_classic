@@ -1,0 +1,33 @@
+<div class="customerLoginBdy">
+    <div id="cmsLoginPage">
+        <eSeller:select value-of="CmsSpecialPages:GetPage(&quot;LoginPage&quot;).CMSSpecialPageContent" />
+    </div>
+    <eSeller:if istrue="Settings:IsCustomerLoginEnabled">
+        <div id="customerLogin">
+            <eSeller:Control ControlID="customerLogin" ControlType="customerLogin" />
+        </div>
+    </eSeller:if>
+</div>
+
+<!--<table border="0" celpadding="0" cellspacing="2" align="center">
+  <tr>
+    <td valign="top" colspan="2">
+
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+
+    </td>
+    <td valign="top">
+      <eSeller:if istrue="Settings:IsSalespersonLoginEnabled">
+        <div id="salesPersonLogin">
+          <h2>
+            <eSeller:Select Text="heading_salespersonlogin"></eSeller:Select>
+          </h2>
+          <eSeller:Control ControlID="SalesPersonLogin" ControlType="SalesPersonLogin" />
+        </div>
+      </eSeller:if>
+    </td>
+  </tr>
+</table>-->
