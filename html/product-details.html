@@ -12,121 +12,49 @@
 <eSeller:Css Name="#etListprice" Selector="#etHeading tr.HeaderBar td.etListprice" GroupName="#etgHeading" SelectorGroup="24" />
 <eSeller:Css Name="#etListpricePrice" Selector="#etHeading tr.HeaderBar td.etListprice span" GroupName="#etgHeading" SelectorGroup="5" />
 
-<!--Det nye indholdsdesign-->
 
-  <table class="HeaderBarTables" cellpadding="0" cellspacing="0">
-      <tr class="HeaderBar">
-          <td class="etPname" valign="bottom">
-              <h1 style="display:inline;" class="HeaderBar">
-                  <eSeller:Select Value-Of="Product:ProductName" />
-              </h1>
+<div class="page-product-details">
+  <div class="product-details">
+    <div class="product-image">
 
-              <eSeller:if istrue="Settings:ShowProductID">
-                  <div style="color: #797878; font-size: 12px; font-family: Arial; margin-top: 10px;">
-                      <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
-                  </div>
-              </eSeller:if>
-              <eSeller:if istrue="Settings:ShowExtProductID">
-                  <div style="color: #797878; font-size: 12px; font-family: Arial; margin-top: 10px;">
-                       <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
-                  </div>
-              </eSeller:if>
-              <eSeller:if istrue="Settings:ShowAltExtProductID">
-                  <div style="color: #797878; font-size: 12px; font-family: Arial; margin-top: 10px;">
-                      <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
-                  </div>
-              </eSeller:if>
-              <eSeller:if istrue="Settings:ShowProductEAN">
-                  <div style="color: #797878; font-size: 12px; font-family: Arial; margin-top: 10px;">
-                      <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
-                  </div>
-              </eSeller:if>
-          </td>
-          <td align="right" valign="top" style="padding-right: 12px;">
-              <eSeller:If istrue="Settings:ShowPrices">
-                  <eSeller:If istrue="Settings:ShowPrices">
-                      <eSeller:If istrue="Settings:ShowAddToFavorites">
-                          <div style="margin: 0px 0px 10px 0px;" class="etFavorites">
-                              <eSeller:FavoritesButton ControlID="btnFavorites" >
-                              <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_product_favorite" />
-                              </eSeller:FavoritesButton>
-                          </div>
-                      </eSeller:If>
-                      <div class="etPrice" style="font-size: 30px; font-weight: bold; font-family: Arial; color: #333333;">
-                          <eSeller:Select text="label_price" />&amp;nbsp;<eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
-                      </div>
-                      <eSeller:If istrue="Product:hasListprice">
-                          <div style="color: #797878; font-size: 14px; font-family: Arial;" class="etListprice">
-                              <eSeller:Select text="label_listprice" />&amp;nbsp;<span>
-                              <eSeller:Control ControlID="ListPrice" ControlType="Productprice" />
-                              </span>
-                          </div>
-                      </eSeller:If>
-                      <eSeller:If istrue="Product:hasPreviousSalesprice">
-                          <div style="color: #797878; font-size: 14px; font-family: Arial;" class="etPreviousPrice">
-                              <eSeller:Select text="label_previous_price" />&amp;nbsp;<span>
-                              <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
-                              </span>
-                          </div>
-                      </eSeller:If>
-                  </eSeller:If>
-              </eSeller:If>
-          </td>
-      </tr>
-  </table>
-  <table cellpadding="0" cellspacing="0">
-      <tr>
-          <td valign="top">
-              <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
-<div style="margin-left:15px;">
-<eSeller:Control ControlId="variantmages" ControlType="VariantImages" />
+    </div>
+    <div class="product-data">
+      <div class="product-information">
+        <h1 class="product-title">Håndpumpe Benzin</h1>
+        <span class="product-id">Varenr:20-410-001</span>
+      </div>
+      <div class="product-price">
+        <span class="price-current">Pris: DKK 1.493,75</span>
+        <span class="price-previous">Pris: DKK 1.893,75</span>
+      </div>
+
+      <div class="product-accordion">
+        <ul class="accordion" data-accordion="">
+          <li class="accordion-navigation">
+            <a href="#faktablad">Fakta</a>
+            <div id="faktablad" class="content active">
+              Flowrate : 25 l/min<br />
+              Længde : 840 mm sugerør<br />
+              Pumpe Type : Håndpumpe<br />
+              Tromle størrelse : 60-200 l tromle<br />
+              varetype : 1<br />
+              Vægt : 5,5 kg<br />
+            </div>
+          </li>
+
+          <li class="accordion-navigation">
+            <a href="#datablad">Datablad</a>
+            <div id="datablad" class="content">
+              Databladet
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-          </td>
-          <td valign="top">
-              <eSeller:If isnotempty="Product:ProductShortDescription">
-                  <div id="etShortDesc" class="content">
-                      <eSeller:Css Name="#etShortDesc" Selector="#etShortDesc" GroupName="#etgTexts" SelectorGroup="12" />
-                      <eSeller:Select Value-Of="Product:ProductShortDescription" />
-                  </div>
-              </eSeller:If>
-              <eSeller:If isnotempty="Product:ProductLongDescription">
-                  <div id="etLongDesc" class="content">
-                      <eSeller:Css Name="#etLongDesc" Selector="#etLongDesc" GroupName="#etgTexts" SelectorGroup="12" />
-                      <eSeller:Select Value-Of="Product:ProductLongDescription" />
-                  </div>
-              </eSeller:If>
-              <div>
-                  <eSeller:Control ControlID="assortments" ControlType="LogicaProductAssortments" />
-              </div>
-              <div>
-                  <eSeller:Control ControlID="assortmentboxes" ControlType="LogicaProductAssortmentBoxes" />
-              </div>
-              <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
 
-              <table cellpadding="0" cellspacing="0" style="border-bottom: solid 1px #e3e3e3; border-top: solid 1px #e3e3e3; margin-top: 14px;" width="500px">
-                  <tr>
-                      <td>
 
-                      </td>
-                      <td width="100px" align="right" style="padding: 5px 0px 5px 0px;">
-                          <eSeller:If istrue="Settings:ShowAddToBasket">
-                              <div class="etBasket">
-                                  <eSeller:BasketButton ControlID="btnBasket">
-                                  <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
-                                  </eSeller:BasketButton>
-
-                              </div>
-                          </eSeller:If>
-                           <br/>
-                          <eSeller:Control ControlID="FavouriteBasketList1" ControlType="FavouriteBasketList" />
-                      </td>
-                  </tr>
-              </table>
-          </td>
-      </tr>
-  </table>
-
-<!--slutningen på det nye indholdsdesign-->
 
 </div>
 
@@ -220,3 +148,7 @@
 <eSeller:if istrue="Product:isConfiguredProduct">
   <eSeller:Control ControlID="productconf" ControlType="ProductConfiguration" />
 </eSeller:if>
+
+<script type="text/javascript">
+  $(document).foundation();
+</script>
