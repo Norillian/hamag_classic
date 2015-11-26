@@ -443,6 +443,42 @@ a.homeButton i {
     color: #030302;
 }
 
+/*** Send login styles ***/
+
+.sendloginPage #ShopContent > table {
+    width: 430px;
+    text-align: left;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 1px #d0d0d0;
+    box-shadow: 4px 6px 13px -4px #919291;
+}
+
+.sendloginPage #ShopContent > table table {
+    margin: 20px;
+}
+
+.sendloginPage #ShopContent > table input[type="submit"] {
+    background: #21d83a;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxZDgzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMTllMzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #21d83a 0%, #219e31 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#21d83a), color-stop(100%,#219e31));
+    background: -webkit-linear-gradient(top, #21d83a 0%,#219e31 100%);
+    background: -o-linear-gradient(top, #21d83a 0%,#219e31 100%);
+    background: -ms-linear-gradient(top, #21d83a 0%,#219e31 100%);
+    background: linear-gradient(to bottom, #21d83a 0%,#219e31 100%);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px !important;
+    width: auto;
+    cursor: pointer;
+    margin: 0px 20px 20px;
+}
+
 /*** customer Menu styles ***/
 
 .salespersonMenuInnerBdy {
