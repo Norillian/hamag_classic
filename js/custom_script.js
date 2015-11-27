@@ -16,4 +16,15 @@ $(document).ready(function(){
   var onclick = $('.product-basket img').attr('onclick');
   $('.product-basket-button').attr('onclick', onclick);
 
+  //Customer dropdown menu scripts
+  $( "#customerMenuInner" ).on( "click", function() {
+        $('.customerDropdown').toggleClass('active');
+    });
+    $(document).mouseup(function (e)
+    {
+        var container = $(".customerMenuBdy");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.customerDropdown').removeClass('active');
+            }
+    });
 });
