@@ -287,8 +287,9 @@ a.homeButton i {
 
 #ucMenuNamebdy {
     background: #ffffff;
-    padding: 0 15px 25px 10px;
+    padding: 0 15px 0px 10px;
     border: 1px solid #d0cfcf;
+    border-bottom: medium none;
     border-top: medium none;
 }
 
@@ -299,7 +300,16 @@ a.homeButton i {
     padding: 8px 0 0;
     color: #333333;
     font-size: 24px;
-    margin-bottom: 0.5rem;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+#ucMenuCmsbdy {
+    border: 1px solid #d0cfcf;
+    border-top: medium none;
+    padding: 0 15px 25px 10px;
+    color: #666666;
+    font-size: 16px;
 }
 
 #ShopContent .plistAreaHeader > div {
