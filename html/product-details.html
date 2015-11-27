@@ -19,72 +19,99 @@
       <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
     </div>
     <div class="product-data">
-      <div class="product-information">
+      <div class="product-data-wrap">
+        <div class="product-information">
 
-        <!-- product name -->
-        <h1 class="product-title"><eSeller:Select Value-Of="Product:ProductName" /></h1>
-        <!-- product name end -->
+          <!-- product name -->
+          <h1 class="product-title"><eSeller:Select Value-Of="Product:ProductName" /></h1>
+          <!-- product name end -->
 
-        <!-- product id -->
-        <span class="product-id">
+          <!-- product id -->
+          <span class="product-id">
 
-          <eSeller:if istrue="Settings:ShowProductID">
-            <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
-          </eSeller:if>
+            <eSeller:if istrue="Settings:ShowProductID">
+              <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+            </eSeller:if>
 
-          <eSeller:if istrue="Settings:ShowExtProductID">
-            <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
-          </eSeller:if>
+            <eSeller:if istrue="Settings:ShowExtProductID">
+              <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
+            </eSeller:if>
 
-          <eSeller:if istrue="Settings:ShowAltExtProductID">
-            <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
-          </eSeller:if>
+            <eSeller:if istrue="Settings:ShowAltExtProductID">
+              <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
+            </eSeller:if>
 
-          <eSeller:if istrue="Settings:ShowProductEAN">
-            <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
-          </eSeller:if>
+            <eSeller:if istrue="Settings:ShowProductEAN">
+              <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
+            </eSeller:if>
 
-        </span>
-        <!-- product id end -->
-
-      </div>
-      <div class="product-price">
-        <eSeller:If istrue="Settings:ShowPrices">
-          <span class="price-current">
-            <eSeller:Select text="label_price" />&amp;nbsp;
-            <eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
           </span>
-          <eSeller:If istrue="Product:hasPreviousSalesprice">
-            <span class="price-previous">
-              <eSeller:Select text="label_previous_price" />&amp;nbsp;
-              <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
+          <!-- product id end -->
+
+        </div>
+        <div class="product-price">
+          <eSeller:If istrue="Settings:ShowPrices">
+            <span class="price-current">
+              <eSeller:Select text="label_price" />&amp;nbsp;
+              <eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
             </span>
+            <eSeller:If istrue="Product:hasPreviousSalesprice">
+              <span class="price-previous">
+                <eSeller:Select text="label_previous_price" />&amp;nbsp;
+                <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
+              </span>
+            </eSeller:If>
           </eSeller:If>
-        </eSeller:If>
+        </div>
+
+        <div class="product-variants">
+          <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
+        </div>
+
+        <div class="product-stock">
+          <eSeller:If IsTrue="Product:IsInStock">
+  					<span class="product-in-stock"></span>&amp;nbsp; På lager
+  				</eSeller:If>
+  				<eSeller:If IsTrue="Product:IsNotInStock">
+  					<span class="product-not-in-stock"></span>&amp;nbsp; Ikke på lager
+  				</eSeller:If>
+        </div>
+
+        <div class="product-basket">
+          <eSeller:If istrue="Settings:ShowAddToBasket">
+            <div class="etBasket">
+              <eSeller:BasketButton ControlID="btnBasket">
+                <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+              </eSeller:BasketButton>
+              <a class="product-basket-button">Tilføj til kurv</a>
+            </div>
+          </eSeller:If>
+        </div>
+
+        <div class="product-accordion">
+          <ul class="accordion" data-accordion="">
+            <li class="accordion-navigation active">
+              <a class="accordion-toggle">Fakta</a>
+              <div id="faktablad" class="content">
+                Flowrate : 25 l/min<br />
+                Længde : 840 mm sugerør<br />
+                Pumpe Type : Håndpumpe<br />
+                Tromle størrelse : 60-200 l tromle<br />
+                varetype : 1<br />
+                Vægt : 5,5 kg<br />
+              </div>
+            </li>
+
+            <li class="accordion-navigation">
+              <a class="accordion-toggle">Datablad</a>
+              <div id="datablad" class="content">
+                Databladet
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="product-accordion">
-        <ul class="accordion" data-accordion="">
-          <li class="accordion-navigation">
-            <a href="#faktablad">Fakta</a>
-            <div id="faktablad" class="content active">
-              Flowrate : 25 l/min<br />
-              Længde : 840 mm sugerør<br />
-              Pumpe Type : Håndpumpe<br />
-              Tromle størrelse : 60-200 l tromle<br />
-              varetype : 1<br />
-              Vægt : 5,5 kg<br />
-            </div>
-          </li>
-
-          <li class="accordion-navigation">
-            <a href="#datablad">Datablad</a>
-            <div id="datablad" class="content">
-              Databladet
-            </div>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
 </div>
@@ -170,20 +197,9 @@
 
 
 
-
-
-<div style="clear:both">
-  <br />
-</div>
-
-
 <eSeller:if istrue="Product:isAuction">
   <eSeller:Control ControlID="actionbids" ControlType="AuctionBids" />
 </eSeller:if>
 <eSeller:if istrue="Product:isConfiguredProduct">
   <eSeller:Control ControlID="productconf" ControlType="ProductConfiguration" />
 </eSeller:if>
-
-<script type="text/javascript">
-  $(document).foundation();
-</script>
