@@ -304,6 +304,12 @@ a.homeButton i {
     padding-bottom: 0.5rem;
 }
 
+#ucMenuNamebdy.noCMStext {
+    border: 1px solid #d0cfcf;
+    padding: 0 15px 25px 10px;
+    border-top: medium none;
+}
+
 #ucMenuCmsbdy {
     border: 1px solid #d0cfcf;
     border-top: medium none;
