@@ -27,4 +27,11 @@ $(document).ready(function(){
                 $('.customerDropdown').removeClass('active');
             }
     });
+
+    // Frontpage Slider
+    $('.frontpage-slider li').each(function(){
+      var target = $(this);
+      var imgUrl = $(this).find('img').attr('src');
+      target.attr('style', 'background-image:url(' + imgUrl + ')');
+    });
 });
