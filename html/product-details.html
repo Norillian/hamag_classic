@@ -16,16 +16,51 @@
 <div class="page-product-details">
   <div class="product-details">
     <div class="product-image">
-
+      <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
     </div>
     <div class="product-data">
       <div class="product-information">
-        <h1 class="product-title">Håndpumpe Benzin</h1>
-        <span class="product-id">Varenr:20-410-001</span>
+
+        <!-- product name -->
+        <h1 class="product-title"><eSeller:Select Value-Of="Product:ProductName" /></h1>
+        <!-- product name end -->
+
+        <!-- product id -->
+        <span class="product-id">
+
+          <eSeller:if istrue="Settings:ShowProductID">
+            <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+          </eSeller:if>
+
+          <eSeller:if istrue="Settings:ShowExtProductID">
+            <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
+          </eSeller:if>
+
+          <eSeller:if istrue="Settings:ShowAltExtProductID">
+            <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
+          </eSeller:if>
+
+          <eSeller:if istrue="Settings:ShowProductEAN">
+            <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
+          </eSeller:if>
+
+        </span>
+        <!-- product id end -->
+
       </div>
       <div class="product-price">
-        <span class="price-current">Pris: DKK 1.493,75</span>
-        <span class="price-previous">Pris: DKK 1.893,75</span>
+        <eSeller:If istrue="Settings:ShowPrices">
+          <span class="price-current">
+            <eSeller:Select text="label_price" />&amp;nbsp;
+            <eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
+          </span>
+          <eSeller:If istrue="Product:hasPreviousSalesprice">
+            <span class="price-previous">
+              <eSeller:Select text="label_previous_price" />&amp;nbsp;
+              <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
+            </span>
+          </eSeller:If>
+        </eSeller:If>
       </div>
 
       <div class="product-accordion">

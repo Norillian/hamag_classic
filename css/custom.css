@@ -543,3 +543,21 @@ a.homeButton i {
     line-height: normal;
     text-decoration: none;
 }
+
+/* Product Details */
+
+.product-details{
+  overflow:hidden;
+}
+
+.product-image{
+  float:left;
+  display:block;
+  width:40%;
+}
+
+.product-data{
+  float:left;
+  display:block;
+  width:60%;
+}
