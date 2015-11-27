@@ -1,13 +1,34 @@
 <div class="salespersonMenuBdy">
     <div class="salespersonMenuInnerBdy">
         <eSeller:if istrue="Settings:IsCustomerLoggedIn">
-            <span>
-                <eSeller:Select text="label_salesperson_header" /><br />
-                <b><eSeller:Select Value-Of="CustomerLogin:Name" /></b>
-            </span>
-            <a href="#">
-                <i class="fa fa-user"></i> <eSeller:Select text="label_salesperson_lnk_text" />
-            </a>
+            <div class="customerMenuBdy">
+                <div id="customerMenuInner">
+                    <span>
+                        <eSeller:Select text="label_salesperson_header" /><br />
+                        <b><eSeller:Select Value-Of="CustomerLogin:Name" /></b>
+                    </span>
+                    <a href="#">
+                        <i class="fa fa-user"></i> <eSeller:Select text="label_salesperson_lnk_text" />
+                    </a>
+                </div>
+                <div class="customerDropdown" style="display:none;">
+                    <ul>
+                        <li>
+                            <a href="#">Mine dokumenter</a>
+                        </li>
+                        <li>
+                            <a href="#">Ændre password</a>
+                        </li>
+                        <li>
+                            <a href="#">Favoritkurve</a>
+                        </li>
+                        <li>
+                            <a href="#">Ordrehistorik</a>
+                        </li>
+                    </ul>
+                    <a href="/logout.aspx">Log ud</a>
+                </div>
+            </div>
         </eSeller:if>
         <eSeller:if isfalse="Settings:IsCustomerLoggedIn">
             <a href="/customers/customer_login.aspx">
