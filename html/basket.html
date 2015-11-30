@@ -1,54 +1,48 @@
-<eSeller:Css Name="#buttonNavNext" Selector=".buttonNavNext" GroupName="#navButtons" SelectorGroup="11" />
-<eSeller:Css Name="#buttonNavPrev" Selector=".buttonNavPrev" GroupName="#navButtons" SelectorGroup="11" />
-<eSeller:Css Name="#buttonUpdateBasket" Selector=".buttonUpdateBasket" GroupName="#navButtons" SelectorGroup="11" />
-<eSeller:Css Name="#buttonClearBasket" Selector=".buttonClearBasket" GroupName="#navButtons" SelectorGroup="11" />
-
-<eSeller:Control ControlType="Genericbutton" Controlid="Gem kunde knap" Workson="Kundedata" Command="Save" />
-<eSeller:Control ControlType="Genericbutton" Controlid="Slet kunde knap" Workson="Kundedata" Command="delete" />
-
-<eSeller:Control ControlType="BasketMessages" ControlId="BasketMessages" />
 <eSeller:If IsFalse="Basket:IsEmpty">
-  <table width="100%">
-    <tr>
-      <td align="left">
-        <h2>
-          <b>
-            <eSeller:Select Text="label_page_name" />
-          </b>
-        </h2>
-      </td>
-      <td align="right">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="Next" Mode="NavigateNext" CssClass="buttonNavNext" CausesValidation="True" />
-      </td>
-    </tr>
-  </table>
+  <div class="page-basket">
+    <h1>Indkøbskurv</h1>
+    <div class="basket-navigation navigation-top">
+      <a href="" class="button basket-back">Forsæt med at handle</a>
+      <a href="" class="button basket-forward">Gå til kassen</a>
+    </div>
 
-  <eSeller:Control ControlId="Basket" ControlType="BasketDetails" />
+    <div class="basket-content">
+      <eSeller:Control ControlId="Basket" ControlType="BasketDetails" />
+    </div>
+    <div class="basket-total">
+      <eSeller:Control ControlId="Totals" ControlType="BasketTotals"></eSeller:Control>
+    </div>
 
-  <eSeller:Control ControlId="Totals" ControlType="BasketTotals"></eSeller:Control>
+    <div class="basket-navigation navigation-bottom">
+      <a href="" class="button empty-basket">Tøm kurven</a>
+      <a href="" class="button update-basket">Opdater indhold</a>
+      <a href="" class="button basket-forward">Gå til kassen</a>
+    </div>
+  </div>
 
-  <table width="100%">
-    <tr>
-      <td align="right" colspan="2">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="ClearBasket" Mode="ClearBasket" CausesValidation="True" CssClass="buttonClearBasket" />
-        <eSeller:Control ControlType="BasketActionButton" ControlId="UpdateBasket" Mode="UpdateBasket" CausesValidation="True" CssClass="buttonUpdateBasket" />
-      </td>
-    </tr>
-    <tr>
-      <td align="left">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" CssClass="buttonNavPrev" />
-      </td>
-      <td align="right">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="Next2" Mode="NavigateNext" CssClass="buttonNavNext" CausesValidation="True" />
-      </td>
-    </tr>
-  </table>
+  <div class="basket-hidden">
+
+    <eSeller:Control ControlType="BasketActionButton" ControlId="ClearBasket" Mode="ClearBasket" CausesValidation="True" CssClass="buttonClearBasket" />
+    <eSeller:Control ControlType="BasketActionButton" ControlId="UpdateBasket" Mode="UpdateBasket" CausesValidation="True" CssClass="buttonUpdateBasket" />
+    <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" CssClass="buttonNavPrev" />
+    <eSeller:Control ControlType="BasketActionButton" ControlId="Next2" Mode="NavigateNext" CssClass="buttonNavNext" CausesValidation="True" />
+
+  </div>
+
 </eSeller:If>
 
+
+
 <eSeller:If IsTrue="Basket:IsEmpty">
-  <div style="text-align: center">
+  <div class="page-basket">
     <eSeller:Select Text="error_label_empty_basket" />
     <br />
     <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" DuplicateID="True" CssClass="buttonNavPrev" />
   </div>
 </eSeller:If>
+
+<style>
+  .contentPane{
+    background:none;
+  }
+</style>

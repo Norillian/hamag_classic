@@ -40,4 +40,28 @@ $(document).ready(function(){
     if(relatedProducts){
       $('.product-related').addClass('active');
     }
+
+    // Basket related
+
+      // Prevent Default on basket links
+      $('.basket-navigation a').on('click', function(e){
+        e.preventDefault();
+      });
+
+      // Basket Empty Basket
+      var emptyOnClick = $('.buttonClearBasket').attr('onclick');
+      $('.empty-basket').attr('onclick', emptyOnClick);
+
+      // Basket Update Basket
+      var updateOnClick = $('.buttonUpdateBasket').attr('onclick');
+      $('.update-basket').attr('onclick', updateOnClick);
+
+      // Basket Back
+      var backOnClick = $('.buttonNavPrev').attr('onclick');
+      $('.basket-back').attr('onclick', backOnClick);
+
+      // Basket Forward
+      var forwardOnClick = $('.buttonNavNext').attr('onclick');
+      $('.basket-forward').attr('onclick', forwardOnClick);
+
 });
