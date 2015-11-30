@@ -2,6 +2,9 @@
     #outerBdy {
         background-image: url('/images/editor/images/desktop_body_bg_breadcrumb.png');
     }
+    .contentPane{
+      background:none;
+    }
 </style>
 <div id="outerBdy">
     <div class="inner-wrap">
@@ -38,7 +41,16 @@
         </div>
     </div>
     <div id="bottom">
-        <eSeller:Container ContainerName="bottomPane" CssId="#bottom" ContainerType="ShopBottom" AllowShopElements="True" />
+
+      <div class="section-bottom">
+        <div class="column-4">
+          <div class="bottom-content bottom-information">
+            <h4>Information</h4>
+            <eSeller:Container ContainerName="infoMenuBottom" CssId="#infoMenuBottom" />
+          </div>
+        </div>
+        <eSeller:Content ContainerName="bottomContent" CssId="#bottomContent" />
+      </div>
     </div>
 </div>
 <script type="text/javascript">

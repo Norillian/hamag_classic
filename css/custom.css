@@ -13,7 +13,22 @@ h1,h2,h3,h4,p, label,
     background-repeat: repeat-x;
     background-position: top center;
     background-color: #f3f2f2;
-    min-height: 800px;
+    height:auto;
+    min-height:100%!important;
+    position:relative;
+    padding-bottom:280px;
+}
+
+/* TODO: Minor fix for now */
+.contentPane div#postcontentContainer{
+  display:none;
+}
+
+html,
+body,
+form#aspnetForm{
+  height:100%!important;
+  min-height:100%!important;
 }
 
 #quickNavBar div a {
@@ -211,6 +226,11 @@ a.homeButton i {
     font-weight: normal;
 }
 
+.inner-wrap{
+  min-height:100%;
+  padding-bottom:50px;
+}
+
 #leftPane,
 .contentPane {
     display: inline-block;
@@ -234,6 +254,95 @@ a.homeButton i {
 .contentOuterBdy {
     text-align: left;
     width: 100%;
+}
+
+
+/* Footer Area */
+#bottom{
+  position:absolute;
+  bottom:0;
+  overflow:hidden;
+  width:100%;
+  min-height:200px;
+  background:#fff;
+  border-top:1px solid #eae9e9;
+}
+
+#infoMenu2h2{
+  display:none;
+}
+
+.section-bottom{
+  margin:0 auto;
+  text-align:left;
+  overflow:hidden;
+  width:1200px;
+  font-size: 12px;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #666666;
+}
+
+.section-bottom h4{
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  font-size: 16px;
+  color: #666666;
+}
+
+.section-bottom ul{
+  list-style:none;
+  line-height:20px;
+}
+
+.section-bottom a{
+  font-size: 12px;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #666666;
+  text-decoration:none;
+}
+
+.section-bottom a:hover{
+  text-decoration:underline;
+}
+
+.bottom-social img{
+  float:left;
+  height:30px;
+  width:30px;
+  margin-right:8px;
+}
+
+.section-spacer{
+  display:block;
+  height:40px;
+}
+
+.column-4{
+  height:100%;
+  float:left;
+  width:25%;
+
+}
+
+.bottom-content{
+  border-right:1px solid #eceaea;
+  padding:15px;
+  min-height:200px;
+}
+
+.bottom-contact.bottom-content{
+  border-right:0;
+}
+
+.bottom-content p{
+  margin:0;
+}
+
+.bottom-phonenumber{
+  display: block;
+  font-size: 24px;
+  font-family: Tahoma, Arial, sans-serif;
+  font-weight:bold;
 }
 
 #pMenuSublevels #pMenuSublevelsh2 {
@@ -325,6 +434,7 @@ a.homeButton i {
 
 #ShopContent .plistAreaHeader > div .prelement {
     width: 33.33%;
+    background:#fff;
     text-align: center;
 }
 
@@ -340,6 +450,16 @@ a.homeButton i {
     padding-left: 10px;
     border: 1px solid #d0cfcf;
     border-top: medium none;
+}
+
+.plistpager{
+  font-size:12px;
+  line-height:35px;
+  color:#ccc;
+}
+
+.plistpager a{
+  color:#666;
 }
 
 #ShopContent .plistAreaHeader > div .prelement .prmain {
@@ -546,6 +666,10 @@ a.homeButton i {
 
 /* Product Details */
 
+.page-product-details{
+  background:#fff;
+}
+
 .product-details{
   overflow:hidden;
   box-sizing: border-box;
@@ -723,6 +847,29 @@ h1.product-title{
   font-size:14px;
 }
 
+/** Related Products **/
+.product-related{
+  display:none;
+  margin-top:10px;
+  overflow:hidden;
+  clear:both;
+}
+
+.product-related.active{
+  display:block;
+}
+
+.product-related h2{
+  margin: 20px 0 5px 15px;
+  color: #333333;
+  font-size: 30px;
+  font-weight:normal;
+}
+
+.product-related .prelement{
+  border-top:1px solid #d0cfcf
+}
+
 /*** Customer dropdown menu styles ***/
 
 .customerMenuBdy {
@@ -797,6 +944,10 @@ h1.product-title{
 
 
 /* Frontpage Slider */
+
+.page-frontpage{
+  overflow:hidden;
+}
 
 .frontpage-slider{
   display:none;

@@ -34,4 +34,10 @@ $(document).ready(function(){
       var imgUrl = $(this).find('img').attr('src');
       target.attr('style', 'background-image:url(' + imgUrl + ')');
     });
+
+    // Check Related Products
+    var relatedProducts = $('.product-related .plist').length;
+    if(relatedProducts){
+      $('.product-related').addClass('active');
+    }
 });

@@ -93,19 +93,14 @@
             <li class="accordion-navigation active">
               <a class="accordion-toggle">Fakta</a>
               <div id="faktablad" class="content">
-                Flowrate : 25 l/min<br />
-                Længde : 840 mm sugerør<br />
-                Pumpe Type : Håndpumpe<br />
-                Tromle størrelse : 60-200 l tromle<br />
-                varetype : 1<br />
-                Vægt : 5,5 kg<br />
+                <eSeller:Select Value-Of="Product:ProductShortDescription" />
               </div>
             </li>
 
             <li class="accordion-navigation">
               <a class="accordion-toggle">Datablad</a>
               <div id="datablad" class="content">
-                Databladet
+                Product Documents
               </div>
             </li>
           </ul>
@@ -116,6 +111,10 @@
   </div>
 </div>
 
+<div class="product-related">
+  <h2>Relaterede produkter</h2>
+  <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="True" />
+</div>
 
 
 </div>
