@@ -1,125 +1,38 @@
-<eSeller:Css Name="#buttonNavNext" Selector=".buttonNavNext" GroupName="#navButtons" SelectorGroup="11" />
-<eSeller:Css Name="#buttonNavPrev" Selector=".buttonNavPrev" GroupName="#navButtons" SelectorGroup="11" />
-<eSeller:If IsFalse="Basket:IsEmpty">
-  <div style="margin-top: 5px;">
-    <eSeller:Control ControlType="CheckoutProgressIndicator" ControlId="CheckoutProgressIndicator" />
+<div class="page-checkout">
+  <div class="column-2 invoice-address">
+    <h2><eSeller:Select Text="label_invoice_head" TextSourceControlId="Betalingsadresse" /></h2>
+    <eSeller:Control ControlId="Betalingsadresse" ControlType="PaymentAddress" InputMode="Updatable" />
   </div>
-  <table width="100%">
-    <tr>
-      <td align="left">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" CssClass="buttonNavPrev" />
-      </td>
-      <td align="right">
-        <eSeller:Control ControlType="BasketActionButton" ControlId="NextStep" Mode="NavigateNext" CssClass="buttonNavNext"
-CausesValidation="True" CausesSave="True" >
-          <eSeller:Attribute Name="Text" Text="button_next(address)" />
-        </eSeller:Control>
-      </td>
-    </tr>
-    <tr>
-      <td class="content" valign="top" align="left" colspan="2">
-        <span id="ctl00_plhContent_lblOrderHelp">
-          <eSeller:Select Text="label_order_help" />
-        </span>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" height="25">
-        <br />
-        <hr noshade="" size="1" />
+  <div class="column-2 delivery-address">
+    <h2><eSeller:Select Text="label_delivery_head" TextSourceControlId="Leveringsadresse" /></h2>
+    <div class="delivery-address-enable">
+      <eSeller:Control ControlType="ShipmentAddressCheckbox" ControlId="BrugLeveringsadresseValg"  />
+    </div>
+    <eSeller:Control ControlId="Leveringsadresse" ControlType="ShipmentAddress" InputMode="Updatable"/>
+  </div>
 
-        <eSeller:Select Text="label_phone_search" TextSourceControlId="TelefonOpslag" />
-        <eSeller:Control ControlType="AddressLookup" ControlId="TelefonOpslag" />
-        <eSeller:Control ControlType="GenericButton" ControlId="TlfOpslagKnap" WorksOn="TelefonOpslag" ButtonType="Link" />
-        <table class="content" cellspacing="2" cellpadding="2" width="100%" border="0">
-          <tr>
-            <td valign="top" width="50%">
-              <div>
-                <strong>
-                  <eSeller:Select Text="label_invoice_head" TextSourceControlId="Betalingsadresse" />
-                </strong>
-              </div>
+  <div class="payment-method">
+    <h2><eSeller:Select Text="label_payment_method" TextSourceControlId="Betalingsmåde" /></h2>
+    <eSeller:Control ControlType="PaymentMethodSelect" ControlId="Betalingsmåde" />
+  </div>
 
-              <eSeller:Control ControlId="Betalingsadresse" ControlType="PaymentAddress" InputMode="Updatable" />
-            </td>
-            <td valign="top" width="50%">
-              <div>
-                <strong>
-                  <eSeller:Select Text="label_delivery_head" TextSourceControlId="Leveringsadresse" />
-                </strong>
-              </div>
-              <div>
-                <eSeller:Control ControlType="ShipmentAddressCheckbox" ControlId="BrugLeveringsadresseValg"  />
-              </div>
+  <div class="delivery-method">
+    <h2><eSeller:Select Text="label_delivery_method" TextSourceControlId="Leveringsmåde" /></h2>
+    <eSeller:Control ControlType="ShipmentMethodSelect" ControlId="Leveringsmåde" />
+  </div>
 
-              <eSeller:Control ControlId="Leveringsadresse" ControlType="ShipmentAddress" InputMode="Updatable"/>
-              <!--<eSeller:If IsTrue="Settings:IsLoggedIn">
-                <eSeller:Ifand IsTrue="Customer:HasDeliveryAddresses" />
-                <eSeller:Control ControlId="Leveringsadresse" ControlType="DeliveryAddress" InputMode="Protected"/>
-              </eSeller:If>
-              <eSeller:If IsFalse="Settings:IsLoggedIn">
-                <eSeller:Control DuplicateId="true" ControlId="Leveringsadresse" ControlType="DeliveryAddress" InputMode="Updatable"/>
-              </eSeller:If>-->
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table>
-                <tr>
-                  <td valign="top">
-                    <eSeller:Select Text="label_payment_method" TextSourceControlId="Betalingsmåde" />
-                  </td>
-                  <td valign="top">
-                    <eSeller:Control ControlType="PaymentMethodSelect" ControlId="Betalingsmåde" />
-                    <!--<eSeller:Control ControlType="PaymentMethodSelectRadioButtonList" ControlId="Betalingsmåde" />-->
-                  </td>
-                </tr>
-                <tr>
-                  <td valign="top">
-                    <eSeller:Select Text="label_delivery_method" TextSourceControlId="Leveringsmåde" />
-                  </td>
-                  <td valign="top">
-                    <eSeller:Control ControlType="ShipmentMethodSelect" ControlId="Leveringsmåde" />
-                   <!--<eSeller:Control ControlType="ShipmentMethodSelectRadioButtonList" ControlId="Leveringsmåde" />-->
-                  </td>
-                </tr>
-                <tr>
-                  <td valign="middle" nowrap="" colspan="2">
-                    <hr noshade="" size="1" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content" colspan="2">
-                    <eSeller:Select Text="label_order_remarks" TextSourceControlId="Ordrebemærkning"/>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-<style type="text/css">
-.txtOrderRemarks {width:100%; height:40px;}
+  <div class="checkout-navigation">
+    <a href="" class="button basket-forward">Færdiggør order</a>
+  </div>
+
+</div>
+<div class="hidden">
+  <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" CssClass="buttonNavPrev" />
+  <eSeller:Control ControlType="BasketActionButton" ControlId="NextStep" Mode="NavigateNext" CssClass="buttonNavNext" />
+</div>
+
+<style>
+  .contentPane{
+    background:none;
+  }
 </style>
-                    <eSeller:Control ControlType="OrderingRemarks" ControlId="Ordrebemærkning"  CssClass="txtOrderRemarks" MaxLength="80" />
-                  </td>
-                </tr>
-
-              </table>
-            </td>
-          </tr>
-        </table>
-
-      </td>
-    </tr>
-  </table>
-</eSeller:If>
-
-
-<eSeller:If IsTrue="Basket:IsEmpty">
-  <div style="text-align: center">
-    <eSeller:Select AppText="basket_is_empty" />
-    <br />
-    <eSeller:Control ControlType="NavigateButton" ControlId="JumpOutButton" Command="Frontpage" CssClass="buttonNavPrev" >
-      <eSeller:Attribute Name="Text" AppText="Navigate_goto_frontpage" />
-    </eSeller:Control>
-
-  </div>
-</eSeller:If>

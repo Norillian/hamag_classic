@@ -26,8 +26,8 @@ CausesValidation="True" />
 </eSeller:If>
 
 <eSeller:If IsTrue="Basket:IsEmpty">
-<div style="text-align: center">
-<eSeller:Select Text="error_label_empty_basket" /><br />
-<eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" DuplicateId="True" CssClass="buttonNavPrev" />
-</div>
+  <div style="text-align: center">
+    <eSeller:Select Text="error_label_empty_basket" /><br />
+    <eSeller:Control ControlType="BasketActionButton" ControlId="PreviousStep" Mode="NavigatePrevious" DuplicateId="True" CssClass="buttonNavPrev" />
+  </div>
 </eSeller:If>

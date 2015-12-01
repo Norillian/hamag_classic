@@ -44,7 +44,7 @@ $(document).ready(function(){
     // Basket related
 
       // Prevent Default on basket links
-      $('.basket-navigation a').on('click', function(e){
+      $('.basket-navigation a, .checkout-navigation a').on('click', function(e){
         e.preventDefault();
       });
 
