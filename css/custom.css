@@ -529,7 +529,7 @@ a.homeButton i {
 }
 
 .customerLoginBdy > div {
-    margin: 20px 52px;
+    margin: 16px 52px;
 }
 
 .customerLoginBdy {
@@ -541,33 +541,48 @@ a.homeButton i {
     box-shadow: 4px 6px 13px -4px #919291;
 }
 
-.customerLoginBdy h2 {
-    padding: 0;
+p.sub-login-text{
     margin: 0;
+    color: #666666;
+    font-family: Tahoma, Arial, sans-serif !important;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 #customerLogin table {
     width: 100%;
+    margin: 0;
+}
+#customerLogin table tr:nth-of-type(even){
+    background: none !important;
+}
+#customerLogin table tr td{
+    padding: 2px 0 !important;
 }
 
 #customerLogin table label {
-    color: #333333;
+    color: #000000;
+    font-family: Tahoma, Arial, sans-serif;
     font-size: 12px;
-    font-weight: bold;
 }
 
 #customerLogin table input {
     width: 100%;
     border: solid 1px #dddddb;
-    margin: 3px 0;
+    margin: 0;
     line-height: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    padding: 0 5px;
 }
 
 #customerLogin table .button {
     text-align: right;
     width: 100%;
-    position: relative;
-    left: 4px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 #customerLogin table input[type="button"] {
@@ -587,20 +602,24 @@ a.homeButton i {
     border: none;
     border-radius: 4px !important;
     width: auto;
-    margin-top: 10px;
+    margin-top: 12px;
     cursor: pointer;
+    height: 34px;
+    line-height: 22px;
 }
 
 #customerLogin li {
     text-align: right;
+    height: 1px;
 }
 
 #customerLogin li a {
     font-size: 12px;
     color: #666666;
+    font-family: Tahoma, Arial, sans-serif;
     text-decoration: underline;
     position: relative;
-    bottom: 30px;
+    bottom: 36px;
     right: 105px;
 }
 
@@ -621,7 +640,31 @@ a.homeButton i {
 }
 
 .sendloginPage #ShopContent > table table {
-    margin: 20px;
+    margin: 12px 20px 0 20px;
+    border: none;
+}
+.sendloginPage #ShopContent > table table tr:nth-of-type(even){
+    background: none;
+}
+.sendloginPage #ShopContent > table table td{
+    padding: 6px 0;
+}
+.sendloginPage #ShopContent > table table td.content span#ctl00_plhContent_lblPageName{
+    font-size: 30px;
+}
+.sendloginPage #ShopContent > table table td.content span#ctl00_plhContent_lblHelpText{
+    font-size: 12px;
+    color: #666666;
+}
+.sendloginPage #ShopContent > table table td.content input#ctl00_plhContent_txtEmail{
+    margin: 0 !important;
+    height: 24px;
+    padding: 0 5px;
+    line-height: 24px;
+}
+.sendloginPage #ShopContent > table table td.content span#ctl00_plhContent_lblEmail{
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
 }
 
 .sendloginPage #ShopContent > table input[type="submit"] {
@@ -642,7 +685,8 @@ a.homeButton i {
     border-radius: 4px !important;
     width: auto;
     cursor: pointer;
-    margin: 0px 20px 20px;
+    margin: 0 20px 20px;
+    float: right;
 }
 
 /*** customer Menu styles ***/
@@ -1418,14 +1462,14 @@ ul.favorite-baskets li.fav-basket-item{
     border-bottom: 1px solid #efefef;
 }
 ul.favorite-baskets li.fav-basket-item .basket-name{
-    width: 70%;
+    width: 65%;
     color: #333333;
     font-family: Tahoma, Arial, sans-serif;
     font-size: 15px;
     padding-top: 4px;
 }
 ul.favorite-baskets li.fav-basket-item .basket-actions{
-    width: 30%;
+    width: 35%;
     text-align: right;
 }
 ul.favorite-baskets li.fav-basket-item .basket-actions .edit-basket,
@@ -1445,7 +1489,6 @@ ul.favorite-baskets li.fav-basket-item .basket-actions .open-basket{
     -ms-border-radius: 4px !important;
     padding: 6px 12px;
     display: inline-block;
-    margin-left: 3px;
 }
 ul.favorite-baskets li.fav-basket-item .basket-actions .edit-basket i,
 ul.favorite-baskets li.fav-basket-item .basket-actions .open-basket i{
@@ -1454,7 +1497,7 @@ ul.favorite-baskets li.fav-basket-item .basket-actions .open-basket i{
 ul.favorite-baskets li.fav-basket-item .basket-actions .delete-basket i{
     color: #d05430;
     font-size: 24px;
-    margin-left: 16px;
+    margin-left: 10px;
     vertical-align: text-top;
 }
 
