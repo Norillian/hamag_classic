@@ -1621,8 +1621,11 @@ a.button.update-basket:hover{
 
 a.button.basket-forward,
 a.button.btn-green,
+a.button,
 button.button.btn-open-document,
-button.button.btn-upload-document{
+button.button.btn-upload-document,
+button.button,
+button{
 
   background: rgba(33,216,57,1);
   background: -moz-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
@@ -1693,4 +1696,48 @@ button.button.btn-upload-document i{
 
 .hidden{
   display:none;
+}
+.ui-dialog {
+    background: #FFFFFF;
+    border: 2px solid #c7c7c6;
+    padding: 18px;
+}
+.ui-dialog-buttonset{
+    overflow: hidden;
+}
+.ui-dialog-buttonset button{
+    margin: 0;
+    height: 30px;
+    padding: 2px 20px;
+}
+.ui-dialog-buttonset button:last-of-type{
+    float: right;
+}
+.ui-dialog-buttonset button:first-of-type{
+    float: left;
+    background: #f3f2f2;
+    color: #333333;
+}
+.ui-dialog-titlebar{
+    overflow: hidden;
+}
+.ui-dialog-titlebar-close,
+.ui-dialog-titlebar-close:hover {
+    background: none;
+    margin: 0;
+    float: right;
+    padding: 0;
+}
+.ui-dialog-titlebar-close span{
+    display: none;
+}
+.ui-dialog-titlebar-close:before{
+    content: "\f00d";
+    color: #333333;
+    font-family: FontAwesome;
+    font-size: 18px;
+}
+.ui-dialog-content{
+    font-size: 14px;
+    font-weight: bold;
 }
