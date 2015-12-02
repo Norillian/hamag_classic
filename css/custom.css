@@ -57,7 +57,7 @@ h1{
     text-indent: -9999px;
     background: url('/images/editor/images/home-img.png') no-repeat 0 50%;
     background-position: 15px 11px;
-    width: 19px;
+    width: 40px;
     height: 37px;
     text-align: center;
 }
@@ -1514,7 +1514,11 @@ ul.favorite-baskets li.fav-basket-item .basket-actions .delete-basket i{
   font-size:14px;
   width:100%;
   border-collapse: separate;
-  border-spacing: 0px;
+  border-spacing: 0;
+    border: none;
+}
+table.my-documents-table tr:nth-of-type(even){
+    background: none;
 }
 
 .my-documents-table td,
@@ -1526,6 +1530,7 @@ ul.favorite-baskets li.fav-basket-item .basket-actions .delete-basket i{
   border:0;
   border-bottom:1px solid #efefef;
   height:75px;
+    white-space: nowrap;
 }
 
 .my-documents-table th{
@@ -1616,8 +1621,8 @@ a.button.update-basket:hover{
 
 a.button.basket-forward,
 a.button.btn-green,
-a.button.btn-open-document,
-a.button.btn-upload-document{
+button.button.btn-open-document,
+button.button.btn-upload-document{
 
   background: rgba(33,216,57,1);
   background: -moz-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
@@ -1642,41 +1647,47 @@ a.button.btn-green{
   width:220px;
 }
 
-a.button.btn-open-document{
+button.button.btn-open-document{
   font-family:'Roboto', Arial, sans-serif;
   font-size:14px;
   text-transform:none;
-  height:30px;
-  line-height:30px;
+  height:32px;
+  line-height:31px;
+    margin: 0;
+    padding: 1px 20px;
 }
-a.button.btn-open-document i{
+button.button.btn-open-document i{
   padding-right:5px;
 }
 
 
-a.button.btn-delete{
+button.button.btn-delete{
   background:none;
   color:#d1542e;
   height:30px;
   font-size:24px;
   line-height:30px;
+    margin: 0;
+    padding:0 20px;
+    vertical-align: top;
 }
 
-a.button.btn-delete i{
+button.button.btn-delete i{
   height:30px;
   line-height:30px;
 }
 
-a.button.btn-upload-document{
+button.button.btn-upload-document{
   font-family:'Roboto', Arial, sans-serif;
   font-size:16px;
   text-transform:none;
   height:39px;
   line-height:39px;
   padding:0 20px;
+    margin: 0;
 }
 
-a.button.btn-upload-document i{
+button.button.btn-upload-document i{
   padding-right:5px;
 }
 
