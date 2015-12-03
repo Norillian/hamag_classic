@@ -20,8 +20,14 @@
       </thead>
       <tbody>
         <tr>
-          <td>Dokumentbeskrivelse olietank</td>
-          <td>Dokumentnavn Tank</td>
+          <td>
+            <span class="doc-description">Dokumentbeskrivelse olietank</span>
+            <input type="text" class="doc-description" style="display: none;" />
+          </td>
+          <td>
+            <span class="doc-name">Dokumentnavn Tank</span>
+            <input type="text" class="doc-name" style="display: none;" />
+          </td>
           <td>01-12-2015</td>
           <td>
             <a href="" class="button btn-open-document"><i class="fa fa-folder-open-o"></i> Åben dokument</a>
@@ -51,3 +57,80 @@
     </table>
   </div>
 </div>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" ></script>
+<script>
+
+  function deleteDocument(event) {
+    var target = event.target;
+    if (target !== "undefined") {
+
+
+      doConfirm("Are you sure?", function yes() {
+        console.log("yes");
+
+      }, function no() {
+        console.log("no");
+      });
+      event.preventDefault();
+    }
+  }
+
+  function doConfirm(msg, yesFn, noFn) {
+
+    var confirmBox = $("#confirmBox");
+    confirmBox.find(".message").text(msg);
+    confirmBox.find(".yes,.no").unbind().click(function () {
+      confirmBox.hide();
+    });
+    confirmBox.find(".yes").click(yesFn);
+    confirmBox.find(".no").click(noFn);
+
+    // confirmBox.show();
+
+    confirmBox.dialog
+    ({
+      //autoOpen: true,
+      modal: true,
+      buttons:
+      {
+        'Yes': function () {
+          $(this).dialog('close');
+          $(this).find(".yes").click();
+        },
+        'No': function () {
+          $(this).dialog('close');
+          $(this).find(".no").click();
+        }
+      }
+    });
+
+  }
+
+  $(document).ready(function() {
+    var editSelector = $('.my-documents-table td span');
+    $(editSelector).click(function() {
+
+      var editorElement = $(this).next('input');
+
+      $(this).hide(700).promise().done(function(){
+        $(editorElement).show(700);
+      });
+
+      editorElement.focusout(function(){
+
+        /*alert('some method for save');*/
+
+        var savedValue = $(this).val();
+        var savedElement = $(this).prev('span');
+        $(savedElement).text(savedValue);
+
+        $(this).hide(700).promise().done(function(){
+          $(savedElement).show(700);
+        });
+
+      });
+
+    });
+  });
+
+</script>

@@ -1532,7 +1532,13 @@ table.my-documents-table tr:nth-of-type(even){
   height:75px;
     white-space: nowrap;
 }
-
+.my-documents-table td span{
+    cursor: pointer;
+}
+.my-documents-table td input{
+    margin: 0;
+    width: auto;
+}
 .my-documents-table th{
   height:33px;
 }
