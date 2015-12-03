@@ -20,11 +20,11 @@
       </thead>
       <tbody>
         <tr>
-          <td>
+          <td class="has-input">
             <span class="doc-description">Dokumentbeskrivelse olietank</span>
             <input type="text" class="doc-description" style="display: none;" />
           </td>
-          <td>
+          <td class="has-input">
             <span class="doc-name">Dokumentnavn Tank</span>
             <input type="text" class="doc-name" style="display: none;" />
           </td>
@@ -106,31 +106,29 @@
 
   }
 
-  $(document).ready(function() {
-    var editSelector = $('.my-documents-table td span');
-    $(editSelector).click(function() {
-
-      var editorElement = $(this).next('input');
-
-      $(this).hide(700).promise().done(function(){
-        $(editorElement).show(700);
-      });
-
-      editorElement.focusout(function(){
-
-        /*alert('some method for save');*/
-
-        var savedValue = $(this).val();
-        var savedElement = $(this).prev('span');
-        $(savedElement).text(savedValue);
-
-        $(this).hide(700).promise().done(function(){
-          $(savedElement).show(700);
-        });
-
-      });
-
-    });
+  $(document).ready(function(){
+    initEditor();
   });
+  function initEditor(){
+    $('.my-documents-table td.has-input').each(function(){
+      var holder = $(this);
+      var span  = holder.find('span');
+      var input =  holder.find('input');
+
+      span.click(function(){
+        $(this).hide(700).promise().done(function(){
+          input.show(700);
+        });
+        return false;
+      });
+      input.on('blur', function(){
+        alert('some method for save');
+        span.text($(this).val());
+        $(this).hide(700).promise().done(function(){
+          span.show(700);
+        });
+      });
+    });
+  }
 
 </script>
