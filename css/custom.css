@@ -1268,7 +1268,6 @@ table tr:nth-of-type(even){
 }
 
 .basket-content .c3{
-  text-align:center;
   width:85px;
 }
 
@@ -1407,7 +1406,6 @@ table tr:nth-of-type(even){
 .page-checkout{
   background:#fff;
   overflow:hidden;
-  padding:15px;
 }
 
 .page-checkout h2{
@@ -1416,16 +1414,48 @@ table tr:nth-of-type(even){
   text-transform: uppercase;
   font-weight: bold;
 }
+.page-checkout h2:before{
+    content: "1";
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 12px;
+    background: #0f416f;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3px;
+}
+.page-checkout .delivery-address h2:before{
+    content: "2";
+}
+.page-checkout .payment-method h2:before{
+    content: "3";
+}
+.page-checkout .delivery-method h2:before{
+    content: "4";
+}
 
 .page-checkout table{
-  width:100%;
+  width: 450px;
+    border: none;
+}
+.page-checkout .invoice-address,
+.page-checkout .delivery-address{
+    width: 50%;
+    float: left;
+    padding: 0 12px;
 }
 
 .page-checkout tr td{
   color: #666666 !important;
   font-size: 14px!important;
-  height:36px;
   padding-right:15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .page-checkout tr td:first-child{
@@ -1441,17 +1471,13 @@ table tr:nth-of-type(even){
   height:30px;
   width:100%;
   border-radius:0!important;
+    margin: 0;
 }
 
 .delivery-address-enable{
   font-size:14px;
   height:38px;
   line-height:38px;
-}
-
-.column-2{
-  float:left;
-  width:50%;
 }
 
 .payment-method,
@@ -1468,6 +1494,10 @@ table tr:nth-of-type(even){
 
 .checkout-navigation{
   padding:15px 0 0;
+}
+
+.orderSpecification table{
+    border: none
 }
 
 
@@ -1697,7 +1727,8 @@ a.button,
 button.button.btn-open-document,
 button.button.btn-upload-document,
 button.button,
-button{
+button,
+input.button{
 
   background: rgba(33,216,57,1);
   background: -moz-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
@@ -1713,6 +1744,12 @@ button{
     border: none;
     border-radius: 5px !important;
     text-transform: uppercase;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus{
+    background-color: inherit !important;
 }
 
 a.button.btn-green{
