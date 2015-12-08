@@ -255,6 +255,7 @@ a.homeButton i {
     width: 74.8%;
     background: #ffffff;
     position: relative;
+    margin-left: -1px !important;
 }
 .content-container{
     padding: 10px;
@@ -376,6 +377,7 @@ a.homeButton i {
 
 #pMenuSublevels #pMenuSublevelsbdy {
     border-left: 1px solid #d0cfcf;
+    border-right: 1px solid #d0cfcf;
     background: #fff;
 }
 
@@ -744,6 +746,7 @@ p.sub-login-text{
 
 .product-image table{
   width:100%;
+    border: none;
 }
 
 .product-data{
@@ -814,8 +817,10 @@ h1.product-title{
   color:#c95050;
 }
 
-.product-basket{
-  padding:0.9375rem;
+.product-basket,
+.addToFavoritesBdy,
+.removeFromFavoritesBdy{
+  padding: 0 0.9375rem 0.9375rem 0.9375rem;
 }
 
 .product-basket img{
@@ -827,7 +832,7 @@ h1.product-title{
   text-align: center;
   color: #666666;
   font-size: 20px;
-  height: 48px;
+  height: 52px;
   vertical-align: top;
   margin: 0 3px 0 0;
   margin-bottom: 15px;
@@ -836,6 +841,7 @@ h1.product-title{
   border: 1px solid #d0cfcf;
 }
 
+.product-basket-button:hover,
 .product-basket-button{
   background-color: #2a2a2a;
   color: #ffffff;
@@ -870,6 +876,14 @@ h1.product-title{
   padding:0 .5rem;
   position: relative;
 }
+.product-accordion .accordion-navigation a,
+.product-accordion .accordion-navigation.active a {
+    background-color: #fff;
+    color: #666666;
+    font-size: 16px;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+}
 
 .accordion-navigation > a:hover{
   background:#e3e3e3;
@@ -877,6 +891,7 @@ h1.product-title{
 
 .accordion-navigation.active > a:hover{
   background:#fff;
+    text-decoration: underline;
 }
 
 .accordion-navigation > a:after{
@@ -896,14 +911,35 @@ h1.product-title{
 .accordion-navigation .content{
   display:none;
 }
-
-
 .accordion-navigation.active .content{
   font-family:'Open Sans', sans-serif;
   color:#666;
   display:block;
   padding:10px;
   font-size:14px;
+}
+
+.addToFavoritesLnk,
+.removeFromFavoritesLnk{
+    color: #333333;
+    font-size: 14px;
+    font-family: Tahoma, Arial, sans-serif;
+    text-decoration: none;
+    display: block;
+}
+.addToFavoritesLnk:hover,
+.removeFromFavoritesLnk:hover{
+    color: #555555;
+    text-decoration: none;
+}
+
+.addToFavoritesLnk i {
+    color: #0f416f;
+}
+
+.removeFromFavoritesLnk,
+.removeFromFavoritesLnk i {
+    color: #777777;
 }
 
 /** Related Products **/
@@ -1495,9 +1531,46 @@ table tr:nth-of-type(even){
 .checkout-navigation{
   padding:15px 0 0;
 }
-
+.order-confirm{
+    overflow: hidden;
+}
 .orderSpecification table{
     border: none
+}
+.order-table-details table{
+    border: none;
+    border-collapse: collapse;
+}
+.order-table-details table tr.HeaderBar{
+    background-color: #f3f2f2;
+    color: #333333;
+}
+.order-table-details table tr.row td{
+    border-bottom: 1px solid #f3f2f2;
+}
+.order-table-details table tr:before{
+    display: none;
+}
+.order-confirm table#Table1{
+    border: none;
+}
+.order-confirm table#Table1 td{
+    padding: 2px 10px;
+    width: 125px;
+}
+.confirm-info h2,
+.confirm-payment h3,
+.confirm-shipment h3 {
+    font-size: 16px;
+    margin: 0;
+    line-height: 20px;
+    font-weight: bold;
+}
+.confirm-info div,
+.confirm-payment div,
+.confirm-shipment div{
+    line-height: 21px;
+    color: #333333;
 }
 
 
