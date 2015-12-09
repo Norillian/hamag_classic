@@ -1822,15 +1822,14 @@ button.button.btn-upload-document,
 button.button,
 button,
 input.button{
+    background: #21d83a;
+    background: -moz-linear-gradient(top, #21d83a 0%, #209f32 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#21d83a), color-stop(100%,#209f32));
+    background: -webkit-linear-gradient(top, #21d83a 0%,#209f32 100%);
+    background: -o-linear-gradient(top, #21d83a 0%,#209f32 100%);
+    background: -ms-linear-gradient(top, #21d83a 0%,#209f32 100%);
+    background: linear-gradient(to bottom, #21d83a 0%,#209f32 100%);
 
-  background: rgba(33,216,57,1);
-  background: -moz-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,216,57,1)), color-stop(100%, rgba(33,158,50,1)));
-  background: -webkit-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
-  background: -o-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
-  background: -ms-linear-gradient(top, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
-  background: linear-gradient(to bottom, rgba(33,216,57,1) 0%, rgba(33,158,50,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21d839', endColorstr='#219e32', GradientType=0 );
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -1942,4 +1941,33 @@ button.button.btn-upload-document i{
 .ui-dialog-content{
     font-size: 14px;
     font-weight: bold;
+}
+
+/* Level Measurement page styles */
+
+input.measurement-field {
+    display: inline-block;
+    margin: 0 3px 18px 0;
+    width: 35%;
+}
+.field-label{
+    font-size: 15px;
+    color: #000000;
+    padding-bottom: 3px;
+}
+span.requirement{
+    color: #c63a3a;
+    vertical-align: top;
+}
+p.sub-label{
+    margin-bottom: 0;
+    color: #999999;
+    font-size: 11px;
+}
+.radio-set{
+    padding: 18px 0;
+}
+.radio-set .radio-holder input{
+    margin: 0;
+    vertical-align: sub;
 }
