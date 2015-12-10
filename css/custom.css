@@ -19,6 +19,12 @@ h1,h2,h3,h4,p, label,
     position:relative;
     padding-bottom:280px;
 }
+.row:before, .row:after{
+    display: none;
+}
+table{
+    border: none !important;
+}
 
 /* TODO: Minor fix for now */
 .contentPane div#postcontentContainer{
@@ -1628,6 +1634,25 @@ table tr:nth-of-type(even){
     color: #333333;
 }
 
+/* Order hisory page */
+
+.orders-list table{
+    font-family: Tahoma, Arial, sans-serif;
+}
+.orders-list table .HeaderBar{
+    font-size: 14px;
+    font-weight: bold;
+}
+.orders-list table tr.row td{
+    border-bottom: 1px solid #efefef;
+}
+.orders-list table tr.row td a{
+    color: #222222;
+    text-decoration: underline;
+}
+.order-list-table .c3{
+    text-align: right;
+}
 
 /** 404 page **/
 .page-404{
