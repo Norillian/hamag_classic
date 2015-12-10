@@ -64,4 +64,23 @@ $(document).ready(function(){
       var forwardOnClick = $('.buttonNavNext').attr('onclick');
       $('.basket-forward').attr('onclick', forwardOnClick);
 
+  // Open/close basket terms readmor
+
+  $( ".openTermsText" ).click(function() {
+    $('.TermsTextDiv').toggleClass('active');
+    getHeightOfTermsDiv = $('.TermsTextDiv').height();
+    getHeightOfTermsDiv = parseInt(getHeightOfTermsDiv, 10) - 500;
+    $('#ShopContent').css('padding-bottom', getHeightOfTermsDiv);
+  });
+
+  $( "#closeTermsTop" ).click(function() {
+    $('.TermsTextDiv').toggleClass('active');
+    $('#ShopContent').css('padding-bottom', '0');
+  });
+
+  $( "#closeTermsBottom" ).click(function() {
+    $('.TermsTextDiv').toggleClass('active');
+    $('#ShopContent').css('padding-bottom', '0');
+  });
+
 });
