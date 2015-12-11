@@ -261,7 +261,9 @@ a.homeButton i {
     width: 74.8%;
     background: #ffffff;
     position: relative;
-    margin-left: -1px !important;
+}
+#leftPane{
+    margin-right: -1px !important;
 }
 .contentPane.used-tanks-listing{
     width: 100%;
@@ -983,6 +985,164 @@ h1.product-title{
     color: #777777;
 }
 
+/* Product Tabs*/
+
+.product-tabs {
+    border: 1px solid #cbcaca;
+}
+
+.tabs-content .row-column{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tabs-content .row{
+    border-bottom: 1px solid #cbcaca;
+    display: table-row;
+}
+
+.tabs-content .row .columns{
+    display: table-cell;
+    float: none;
+    border-right: 1px solid #cbcaca;
+    border-bottom: 1px solid #cbcaca;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+}
+.tabs-content .row .columns:last-child{
+    border-right: none;
+}
+.tabs-content .row:last-child .columns{
+    border-bottom: none;
+}
+
+.tabs-content .row  .checkbox-col{
+    width: 10%;
+}
+.tabs-content .row  .product-img{
+    width: 20%;
+}
+.tabs-content .row  .name-col{
+    width: 25%;
+    text-align: left;
+}
+.tabs-content .row  .price-col{
+    width: 20%;
+}
+.tabs-content .row  .basket-btn{
+    width: 30%;
+}
+
+
+.product-tabs  .tabs {
+    border-bottom: 1px solid #cbcaca;
+}
+
+.product-tabs  .tabs li{
+    border-right: 1px solid #cbcaca;
+}
+
+.product-tabs  .tabs li a{
+    color: #333333;
+    font-size: 14px;
+}
+
+.product-tabs  .tabs li.active a{
+    font-weight: bold;
+}
+
+.product-tabs  .tabs li a:hover{
+    text-decoration: none;
+}
+
+
+.product-tabs .tabs-content section{
+    margin: 0;
+    padding: 0;
+}
+
+.product-tabs  .tabs-content{
+    background: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.product-tabs table{
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.product-tabs table td{
+    border-right: 1px solid #cbcaca;
+    border-bottom: 1px solid #cbcaca;
+    padding: 1em;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff;
+}
+
+.product-tabs table td label,.product-tabs table td i{
+    margin: 0;
+    padding: 0;
+}
+.product-tabs table td:last-child{
+    border-right: none;
+}
+.product-tabs table tr:last-child td{
+    border-bottom: none;
+}
+.product-tabs  .tabs-content h3.supplement-title{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    font-weight: bold;
+}
+
+.product-tabs section h3.section-title{
+    padding: 1em;
+}
+
+.product-tabs table td.align-left {
+    text-align: left;
+}
+
+.product-tabs  span.varenr{
+    font-style: italic;
+    color: #666666;
+    font-size: 14px;
+}
+.product-tabs   span.price{
+    color: #074380;
+    font-size: 18px;
+    font-weight: bold;
+}
+.product-tabs  #etStockStatusText{
+    text-align: left;
+}
+.product-tabs  .pInfoBasket{
+    text-align: left;
+}
+#main  #ShopContent .product-tabs  .etBasket .ecBB input	{
+    display: none;
+}
+#main  #ShopContent .product-tabs   .etBasket .ecBB{
+    margin: 0;
+    padding: 0;
+}
+#main  #ShopContent .product-tabs .etBasket .ecBB  a.addToBasketBtn{
+    font-size: 16px;
+    line-height: 37px;
+    height: 37px;
+}
+
+.product-tabs  .tabs-content .product-img img {
+    max-width: 85px;
+}
+
 /** Related Products **/
 .product-related{
   display:none;
@@ -995,7 +1155,8 @@ h1.product-title{
   display:block;
 }
 
-.product-related h2{
+.product-related h2,
+.relatedProducts-tabs h3{
   margin: 20px 0 5px 15px;
   color: #333333;
   font-size: 30px;
