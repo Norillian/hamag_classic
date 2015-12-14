@@ -1991,7 +1991,9 @@ table.my-documents-table tr:nth-of-type(even){
   width:220px;
   text-align:right;
 }
-
+.my-documents-table a.button.btn-open-document{
+    margin-bottom: 0;
+}
 /* Confirm Box */
 
 .confirm-overlay{
