@@ -1843,6 +1843,157 @@ table tr:nth-of-type(even){
     text-align: right;
 }
 
+/* Order History Details page */
+
+.orderDetailBdy{
+    overflow: hidden;
+}
+.orderDetailBdy > a {
+    color: #4da47b;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-bottom: 0.9375rem;
+    display: block;
+}
+
+.orderDetailBdy table,
+.orderDetailBdy table tr,
+.orderDetailBdy table th,
+.orderDetailBdy table td {
+    border: medium none;
+    background: none;
+}
+
+.orderDetailBdy table td {
+    color: #333333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    min-width: 130px;
+    padding: 2px 0;
+}
+
+.orderDetailBdy #ec39 input {
+    display: none;
+}
+.orderDetailBdy #ec39 a.addToBasketBtn {
+    background: #21d83a; /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxZDgzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMTllMzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #21d83a 0%, #219e31 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#21d83a), color-stop(100%,#219e31)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #21d83a 0%,#219e31 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #21d83a 0%,#219e31 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #21d83a 0%,#219e31 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #21d83a 0%,#219e31 100%); /* W3C */
+
+    color: #FFF;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    width: 200px;
+    padding: 6px 24px;
+    border: none;
+    border-radius: 4px !important;
+    float: right;
+}
+
+
+.orderDetailBdy h2 {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #666666;
+    display: block;
+    border-bottom: solid 1px #efefef;
+    max-width: 320px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+
+.orderDetailBdy .OrderPaymentMethodBdy span,
+.orderDetailBdy .OrderOrderingRemarksBdy span,
+.orderDetailBdy .OrderShipmentMethodBdy span {
+    color: #333333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    display: inline-block;
+    min-width: 130px;
+}
+
+.orderDetailBdy .OrderShipmentAddressBdy {
+    color: #666666;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 0.9375rem;
+    margin-top: 12px;
+}
+
+.orderDetailBdy .OrderOrderingRemarksBdy {
+    margin-top: 0.9375rem;
+    margin-bottom: 2rem;
+}
+
+.orderDetailBdy .OrderOrderingRemarksBdy span {
+    display: block;
+    min-width: 260px;
+}
+
+.OrderDetailsBdy #ec54 table {
+    width: 100%;
+}
+
+.OrderDetailsBdy #ec54 table .ec54Head th {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #666666;
+    background-color: #f3f2f2;
+}
+
+.OrderDetailsBdy #ec54 table td {
+    padding: 8px 10px;
+    border-bottom: solid 1px #efefef;
+}
+
+.OrderDetailsBdy #ec54 table .c2 {
+    min-width: 80px;
+    width: 80px;
+}
+
+.OrderDetailsBdy #ec54 table .c5 {
+    text-align: center;
+    min-width: 80px;
+    width: 80px;
+}
+
+.OrderDetailsBdy #ec54 table .c6,
+.OrderDetailsBdy #ec54 table .c8 {
+    min-width: 120px;
+    width: 120px;
+}
+
+.OrderTotalsBdy div table {
+    float:right;
+}
+
+.OrderTotalsBdy div table .c2 {
+    text-align: right;
+}
+
+.OrderTotalsBdy #ec77 .ec77TableTotals tr td {
+    border: medium none;
+    padding: 0;
+    font-size: 14px;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #666666;
+}
+
+.OrderTotalsBdy #ec77 .ec77TableTotals tr.ec77Total td{
+    font-size: 18px;
+}
+
 /** 404 page **/
 .page-404{
   border:1px solid #d0cfcf;
