@@ -2234,9 +2234,16 @@ a.button.btn-green,
 a.button,
 button.button.btn-open-document,
 button.button.btn-upload-document,
+button.button.btn-open-document:hover,
+button.button.btn-upload-document:hover,
 button.button,
 button,
-input.button{
+input.button,
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input.button:hover{
     background: #21d83a;
     background: -moz-linear-gradient(top, #21d83a 0%, #209f32 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#21d83a), color-stop(100%,#209f32));
@@ -2250,14 +2257,6 @@ input.button{
     font-weight: bold;
     border: none;
     border-radius: 5px !important;
-    text-transform: uppercase;
-}
-button:hover,
-button:focus,
-.button:hover,
-.button:focus,
-input.button:hover{
-    background-color: inherit !important;
 }
 
 a.button.btn-green{
