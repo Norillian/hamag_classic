@@ -530,6 +530,14 @@ a.homeButton i {
     border-right: 1px solid #d0cfcf;
     border-bottom: 1px solid #d0cfcf;
     padding: 14px 0;
+    min-height: 115px;
+    position: relative;
+}
+#ShopContent .plistAreaHeader > div .prelement .prbasket > span{
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
 }
 
 #ShopContent .plistAreaHeader > div .prelement .prbasket .prpri {
@@ -544,9 +552,9 @@ a.homeButton i {
     font-size: 18px;
     display: block;
     font-weight: bold;
-    padding: 0 0.9375rem 1.2rem;
+    padding: 0 0.9375rem 6px;
     text-decoration: none;
-    min-height: 48px;
+    min-height: 60px;
 }
 
 #ShopContent .plistAreaHeader > div .prelement .prmain .primg a {
@@ -622,10 +630,12 @@ p.sub-login-text{
     padding: 0 5px;
 }
 
-#customerLogin table .button {
+#customerLogin table div.button,
+#customerLogin table div.button:hover {
     text-align: right;
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
+    background: none;
     border: none;
     padding: 0;
     margin: 0;
@@ -1264,8 +1274,10 @@ h1.product-title{
   height:360px;
 }
 
-.slick-arrow{
-  background:url('/images/editor/images/arrow-prev.png') no-repeat center;
+.slick-arrow,
+.slick-arrow:hover{
+  background:url('/images/editor/images/arrow-prev.png') no-repeat left center;
+    background-color: transparent;
   height:100%;
   border:0;
   min-height:66px;
@@ -1273,10 +1285,13 @@ h1.product-title{
   position:absolute;
   z-index:4;
   width:33px;
+    margin-bottom: 0;
+    text-indent: -9999em;
 }
 
-.slick-next.slick-arrow{
-  background:url('/images/editor/images/arrow-next.png') no-repeat center;
+.slick-next.slick-arrow,
+.slick-next.slick-arrow:hover{
+  background:url('/images/editor/images/arrow-next.png') no-repeat right center;
   right:0;
 }
 
