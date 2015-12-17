@@ -110,17 +110,26 @@ a.homeButton i {
     font-size: 24px;
 }
 
+#topMenu{
+    position: relative;
+}
 #topMenu > div {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    float: left;
 }
 
 #quickNavBar {
     width: 100%;
     min-height: 38px;
 }
+#topMenu #pMenuToplevel{
+    display: none;
+}
 
-#main #pMenuToplevell0 a {
+#main #topMenu ul.customPmenuLeftPane > li{
+    display: inline-block;
+}
+#main #topMenu ul.customPmenuLeftPane > li > a {
     padding: 0px 22px !important;
     line-height: 51px;
     color: #ffffff !important;
@@ -132,9 +141,100 @@ a.homeButton i {
     display: inline-block;
 }
 
-#main #pMenuToplevell0 a:hover {
+#main #topMenu ul.customPmenuLeftPane > li > a:hover {
     background-color: #0c4880;
 }
+
+
+/*** Topmenu MegaMenu dropdown ***/
+
+#topMenu ul.f-dropdown .innerDropdown,
+#topMenu ul.f-dropdown .wrapper-item{
+    width: 1200px;
+}
+#topMenu .f-dropdown.open:before,
+#topMenu .f-dropdown.open:after{
+    display: none;
+}
+
+#topMenu ul.f-dropdown .wrapper-item  li.second-level,
+#topMenu ul.f-dropdown .wrapper-item  li.empty-item{
+    display: inline-block;
+    width: 300px;
+    border-right: 1px solid #cccccc;
+    vertical-align: top;
+}
+
+#topMenu ul.f-dropdown {
+    border-bottom: solid 9px #155591;
+    border-top: solid 8px #155591;
+    border-right: solid 1px #cccccc;
+    border-left: solid 1px #cccccc;
+    padding: 0;
+}
+
+#topMenu ul.f-dropdown .innerDropdown {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#topMenu ul.customPmenuLeftPane  ul.mega > div  > div > li > a {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333333;
+}
+
+
+#topMenu ul.f-dropdown > div  > div > li {
+    display: inline-table;
+    width: 300px;
+    min-width: 25%;
+    /*max-width: 25%;*/
+    border-right: 1px solid #cbcaca;
+    padding: 18px 10px 12px;
+
+}
+
+#topMenu ul.f-dropdown li {
+    margin-top: 0;
+}
+
+.f-dropdown li:hover,
+.f-dropdown li:focus {
+    background: none;
+}
+
+#topMenu ul.f-dropdown > div li > ul > li,
+#topMenu ul.f-dropdown > div li > ul {
+    display: block;
+    width: 100%;
+}
+#topMenu ul.f-dropdown > div li > ul > li a{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #666666;
+    padding: 1px 0;
+}
+#topMenu ul.f-dropdown > div li > ul > li a:before{
+    font-family: FontAwesome;
+    content: "\f105";
+    padding-right: 4px;
+}
+#topMenu > ul.customPmenuLeftPane > li > a:hover,
+#topMenu ul.f-dropdown > div li > a:hover,
+#topMenu ul.f-dropdown > div li > ul > li a:hover{
+    text-decoration: none;
+}
+
+#topMenu ul.f-dropdown a {
+    padding: 3px 0px;
+    margin: 0;
+    font-size: 14px;
+    display: block;
+}
+
+
 
 #main #SearchBoxbdy {
     position: relative;
