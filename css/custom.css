@@ -113,6 +113,11 @@ a.homeButton i {
 #topMenu{
     position: relative;
 }
+#topMenu:after{
+    display: block;
+    clear: both;
+    content: '';
+}
 #topMenu > div {
     display: block;
     float: left;
@@ -1870,7 +1875,7 @@ table tr:nth-of-type(even){
 .delivery-method{
   clear:both;
   font-size:14px;
-  padding-top:15px;
+  padding: 15px 12px 0;
 }
 
 .payment-method h2,
@@ -1907,10 +1912,14 @@ table tr:nth-of-type(even){
 }
 
 .checkout-navigation{
-  padding:15px 0 0;
+  padding: 15px 12px 0;
 }
 .order-confirm{
     overflow: hidden;
+    margin-top: -16px;
+}
+.order-confirm .orderSpecification table.orderHeadInfo td#firstColumnPayment.paymentAddressColumn{
+    padding-left: 0 !important;
 }
 .orderSpecification table{
     border: none
