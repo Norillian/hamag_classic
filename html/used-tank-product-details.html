@@ -1,0 +1,209 @@
+<div id="etHeading">
+<div class="page-product-details used-tanks-details">
+  <div class="product-details">
+    <div class="product-image">
+      Used Tank control for Image should be here<br />
+      <div id="ec6PopCanvas"></div>
+      <div id="ec6PopFrame">
+        <div id="ec6PopTopbar">
+          <a href="javascript:Ec6ImageInfoInstance.closeBox();">Luk</a>
+        </div>
+        <img id="ec6PopImage" />
+      </div>
+      <table class="ucImageControl">
+        <tbody>
+        <tr>
+          <td class="ucImageControltrImg">
+            <div>
+              <img src="/SL/SI/347/37/5115d255-9f33-4956-a1fe-44674770c439.jpg?c=0_1" id="plhContent_ctl01_imgProduct" name="imgProduct" alt="Dieseltank 1200l oval" style="display:inline-block; height:300px;
+width:300px; cursor:default;" />
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <!--<eSeller:Control ControlID="productimages" ControlType="ProductImages" />-->
+    </div>
+    <div class="product-data">
+      <div class="product-data-wrap">
+        <div class="product-information">
+
+          <!-- product name -->
+          <h1 class="product-title">Used Tank control for Name should be here<br />
+            <!--<eSeller:Select Value-Of="Product:ProductName" />-->
+          </h1>
+          <!-- product name end -->
+
+          <!-- product id -->
+          <span class="product-id">
+            Used Tank control for Prodict ID should be here<br />
+            Varenummer: 21-100-001
+            <!--<eSeller:if istrue="Settings:ShowProductID">
+              <eSeller:Select text="label_productid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ProductID" />
+            </eSeller:if>
+
+            <eSeller:if istrue="Settings:ShowExtProductID">
+              <eSeller:Select text="label_extproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:ExtProductID" />
+            </eSeller:if>
+
+            <eSeller:if istrue="Settings:ShowAltExtProductID">
+              <eSeller:Select text="label_altextproductid" />&amp;nbsp;<eSeller:Select Value-Of="Product:AltExtProductID" />
+            </eSeller:if>
+
+            <eSeller:if istrue="Settings:ShowProductEAN">
+              <eSeller:Select text="label_ean" />&amp;nbsp;<eSeller:Select Value-Of="Product:EAN" />
+            </eSeller:if>-->
+
+          </span>
+          <!-- product id end -->
+
+        </div>
+        <div class="product-price">
+          Used Tank control for Price should be here<br />
+          <span class="price-current">Pris:&amp;nbsp; DKK 7.360,00</span>
+          <!--<eSeller:If istrue="Settings:ShowPrices">
+            <span class="price-current">
+              <eSeller:Select text="label_price" />&amp;nbsp;
+              <eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
+            </span>
+            <eSeller:If istrue="Product:hasPreviousSalesprice">
+              <span class="price-previous">
+                <eSeller:Select text="label_previous_price" />&amp;nbsp;
+                <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
+              </span>
+            </eSeller:If>
+          </eSeller:If>-->
+        </div>
+
+        <div class="product-stock">
+          Used Tank control for Product stock info should be here<br />
+          <span class="product-not-in-stock"></span>&amp;nbsp; Ikke på lager
+          <!--<eSeller:If IsTrue="Product:IsInStock">
+  					<span class="product-in-stock"></span>&amp;nbsp; På lager
+  				</eSeller:If>
+  				<eSeller:If IsTrue="Product:IsNotInStock">
+  					<span class="product-not-in-stock"></span>&amp;nbsp; Ikke på lager
+  				</eSeller:If>-->
+        </div>
+
+        <div class="product-basket">
+          Used Tank control for Add To Basket button should be here<br />
+          <div class="etBasket">
+            <span id="plhContent_btnBasket" title="Tilføj til indkøbskurv" class="ecBB">
+              <input name="ctl00$plhContent$btnBasket_pid1889" type="text" value="1" id="plhContent_btnBasket_pid1889" onkeydown="atbcr('plhContent_ctl12');" />
+              <img src="/SL/SI/347/1/86a9bb31-1569-4c2c-ba49-5bc68bf20227.png?c=1_0" id="plhContent_ctl12" alt="Tilføj til indkøbskurv" onclick="atb(1889, 'plhContent_btnBasket_pid1889', '');" style="display:inline-block; height:14px; width:51px;" />
+            </span>
+            <a class="product-basket-button" onclick="atb(1889, 'plhContent_btnBasket_pid1889', '');">Tilføj til kurv</a>
+          </div>
+
+          <!--<eSeller:If istrue="Settings:ShowAddToBasket">
+            <div class="etBasket">
+              <eSeller:BasketButton ControlID="btnBasket">
+                <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+              </eSeller:BasketButton>
+              <a class="product-basket-button">Tilføj til kurv</a>
+            </div>
+          </eSeller:If>-->
+        </div>
+
+        <!-- product-details-favorite -->
+        Used Tank control for Favorites function should be here<br />
+        <!--<eSeller:If istrue="Settings:IsLoggedIn">
+          <eSeller:If IsTrue="Product:ShowAddToFavorites">
+            <div class="addToFavorites" style="display:none;">
+              <eSeller:FavoritesButton ControlID="btnFavorites" ><eSeller:Attribute Name="ToolTip" text="tooltip_add_to_product_favorite" />
+              </eSeller:FavoritesButton>
+              <span id="newPInfoAddToFavorites" style="display:none;"><eSeller:Select text="label_new_addToFavourites_btn" /></span>
+            </div>
+            <div class="addToFavoritesBdy">
+              <a class="addToFavoritesLnk"><i class="fa fa-plus-circle"></i>&amp;nbsp;Tilføj til favoritliste</a>
+            </div>
+          </eSeller:If>
+          <eSeller:If IsTrue="Product:ShowRemoveFromFavorites">
+            <div class="removeFromFavorites" style="display:none;">
+              <span class="removeUrl"><eSeller:Select Value-Of="Product:RemoveFromFavoritesUrl" /></span>
+            </div>
+            <div class="removeFromFavoritesBdy">
+              <a class="removeFromFavoritesLnk"><i class="fa fa-minus-circle"></i>&amp;nbsp;Fjern fra din favoritliste</a>
+            </div>
+          </eSeller:If>
+
+          <script type="application/javascript">
+            $('.addToFavoritesLnk').attr('href', $('.addToFavorites span a').attr('href'));
+            var removeFavoriteURL = $('.removeUrl').text();
+            $('.removeFromFavoritesLnk').attr('href', removeFavoriteURL);
+          </script>
+        </eSeller:If>-->
+        <!-- /product-details-favorite -->
+
+        <div class="product-accordion">
+          <ul class="accordion" data-accordion="">
+            <li class="accordion-navigation active">
+              <a href="#faktablad" class="accordion-toggle">Fakta</a>
+              <div id="faktablad" class="content active">
+                Used Tank control for Description should be here
+                <!--<eSeller:Select Value-Of="Product:ProductShortDescription" />-->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="product-related">
+  Used Tank control for Related products should be here<br />
+  <h2>Relaterede produkter</h2>
+  <div class="plist558 plist">
+    <div class="plistAreaHeader">
+      <div class="plistRowOdd plistE6" style="display:inline-block;">
+        <div class="prelement" style="float:left">
+          <div class="prmain">
+            <div class="primg" onclick="javascript:document.location.href='/pi/Spildbakke-1200l-ovaltank_2032_374.aspx';" style="cursor:pointer;">
+              <a href="/pi/Spildbakke-1200l-ovaltank_2032_374.aspx">
+                <img src="/SL/SI/347/20/5115d255-9f33-4956-a1fe-44674770c439.jpg?c=0_1" alt="Spildbakke 1200l ovaltank" style="display:inline-block;height:160px;width:160px;" />
+              </a>
+            </div>
+            <a title="Spildbakke 1200l ovaltank" class="hlink" href="/pi/Spildbakke-1200l-ovaltank_2032_374.aspx">Spildbakke 1200l ovaltank</a>
+            <p> Varenr.: 21-900-001</p>
+          </div>
+          <div class="prbasket">
+            <p class="prpri"> DKK 4.350,00</p>
+            <span id="plhContent_ctl10_ctl00_ctl01_ctl01" title="Tilføj til indkøbskurv">
+              <a href="/baction/atb.aspx?pid=2032&amp;qty=1&amp;rurl=%2fpi%2fDieseltank-1200l-oval_1889_248.aspx">
+                <img src="/SL/SI/347/20/86a9bb31-1569-4c2c-ba49-5bc68bf20227.png?c=1_1" alt="Tilføj til indkøbskurv" style="display:inline-block;height:38px;width:138px;" />
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="prspacer" style="float:left"></div>
+        <div class="prelement" style="float:left">
+          <div class="prmain">
+            <div class="primg" onclick="javascript:document.location.href='/pi/Dieselslange-1-lbm-tillæg-m_2200_.aspx';" style="cursor:pointer;">
+              <a href="/pi/Dieselslange-1-lbm-tillæg-m_2200_.aspx">
+                <img src="/SL/SI/347/20/5115d255-9f33-4956-a1fe-44674770c439.jpg?c=0_1" alt="Dieselslange 1'' lbm tillæg m" style="display:inline-block;height:160px;width:160px;" />
+              </a>
+            </div>
+            <a title="Dieselslange 1'' lbm tillæg m" class="hlink" href="/pi/Dieselslange-1-lbm-tillæg-m_2200_.aspx">Dieselslange 1'' lbm tillæg m</a>
+            <p> Varenr.: 23-600-101</p>
+          </div>
+          <div class="prbasket">
+            <p class="prpri"> DKK 251,00</p>
+            <span id="plhContent_ctl10_ctl00_ctl01_ctl03" title="Tilføj til indkøbskurv">
+              <a href="/baction/atb.aspx?pid=2200&amp;qty=1&amp;rurl=%2fpi%2fDieseltank-1200l-oval_1889_248.aspx">
+               <img src="/SL/SI/347/20/86a9bb31-1569-4c2c-ba49-5bc68bf20227.png?c=1_1" alt="Tilføj til indkøbskurv" style="display:inline-block;height:38px;width:138px;" />
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="prspacer" style="float:left"></div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+  </div>
+  <!--<eSeller:Control ControlType="ProductList" ControlID="RelatedProducts" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="True" />-->
+</div>
+
+</div>
