@@ -2563,3 +2563,10 @@ p.sub-label{
     margin-top: 10px;
     cursor: pointer;
 }
+
+
+#contentCmstext {
+    background: #ffffff;
+    border: 1px solid #d0cfcf;
+    padding: 6px;
+}

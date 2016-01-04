@@ -8,13 +8,17 @@
   <ul class="frontpage-featured">
     <li><eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;forside-feature-1&quot;)" /></li>
     <li><eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;forside-feature-2&quot;)" /></li>
-    <li><eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;forside-feature-3&quot;)" /></li>
+    <li>
+      <div>
+        <eSeller:Control ControlType="QuickOrderControl" ControlId="QuickOrderWidget" />
+      </div>
+     </li>
   </ul>
 
   <ul class="frontpage-information">
 
     <li>
-      <a href="#">
+      <a href="/info/order-service_108l1.aspx">
         <div class="information-text">
           Bestil <span class="text-bold line-break">Service</span>
         </div>
@@ -23,7 +27,7 @@
     </li>
 
     <li>
-      <a href="#">
+      <a href="/info/Support_109l1.aspx">
         <div class="information-text">
           <span class="text-bold line-break">Rådgivning</span>
           &amp; <span class="text-bold"> support</span>
@@ -42,7 +46,7 @@
     </li>
 
     <li>
-      <a href="#">
+      <a href="/info/Newsletter_110l1.aspx">
         <div class="information-text">
           Tilmeld
           <span class="text-bold line-break">Nyhedsbrev</span>
