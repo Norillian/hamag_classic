@@ -9,24 +9,24 @@
   <eSeller:Css Name="#etPrice" Selector="#etHeading tr.HeaderBar td.etPrice" GroupName="#etgHeading" SelectorGroup="24" />
   <eSeller:Css Name="#etBasketFavorites" Selector="#etHeading tr.HeaderBar td.etFavorites" GroupName="#etgHeading" SelectorGroup="24" />
   <eSeller:Css Name="#etBasket" Selector="div.etBasket" GroupName="Generelt" SelectorGroup="12" />
-  <eSeller:Css Name="#etListprice" Selector="#etHeading tr.HeaderBar td.etListprice" GroupName="#etgHeading" SelectorGroup="24" />
-  <eSeller:Css Name="#etListpricePrice" Selector="#etHeading tr.HeaderBar td.etListprice span" GroupName="#etgHeading" SelectorGroup="5" />
+<eSeller:Css Name="#etListprice" Selector="#etHeading tr.HeaderBar td.etListprice" GroupName="#etgHeading" SelectorGroup="24" />
+<eSeller:Css Name="#etListpricePrice" Selector="#etHeading tr.HeaderBar td.etListprice span" GroupName="#etgHeading" SelectorGroup="5" />
 
 
-  <div class="page-product-details">
-    <div class="product-details">
-      <div class="product-image">
-        <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
-      </div>
-      <div class="product-data">
-        <div class="product-data-wrap">
-          <div class="product-information">
+<div class="page-product-details">
+  <div class="product-details">
+    <div class="product-image">
+      <eSeller:Control ControlID="productimages" ControlType="ProductImages" />
+    </div>
+    <div class="product-data">
+      <div class="product-data-wrap">
+        <div class="product-information">
 
-            <!-- product name -->
-            <h1 class="product-title"><eSeller:Select Value-Of="Product:ProductName" /></h1>
-            <!-- product name end -->
+          <!-- product name -->
+          <h1 class="product-title"><eSeller:Select Value-Of="Product:ProductName" /></h1>
+          <!-- product name end -->
 
-            <!-- product id -->
+          <!-- product id -->
           <span class="product-id">
 
             <eSeller:if istrue="Settings:ShowProductID">
@@ -46,104 +46,109 @@
             </eSeller:if>
 
           </span>
-            <!-- product id end -->
+          <!-- product id end -->
 
-          </div>
-          <div class="product-price">
-            <eSeller:If istrue="Settings:ShowPrices">
+        </div>
+        <div class="product-price">
+          <eSeller:If istrue="Settings:ShowPrices">
             <span class="price-current">
               <eSeller:Select text="label_price" />&amp;nbsp;
               <eSeller:Control ControlID="SalesPrice" ControlType="Productprice" />
             </span>
-              <eSeller:If istrue="Product:hasPreviousSalesprice">
+            <eSeller:If istrue="Product:hasPreviousSalesprice">
               <span class="price-previous">
                 <eSeller:Select text="label_previous_price" />&amp;nbsp;
                 <eSeller:Control ControlID="PreviousSalesPrice" ControlType="Productprice" />
               </span>
-              </eSeller:If>
             </eSeller:If>
-          </div>
-
-          <div class="product-variants">
-            <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
-          </div>
-
-          <div class="product-stock">
-            <eSeller:If IsTrue="Product:IsInStock">
-              <span class="product-in-stock"></span>&amp;nbsp; På lager
-            </eSeller:If>
-            <eSeller:If IsTrue="Product:IsNotInStock">
-              <span class="product-not-in-stock"></span>&amp;nbsp; Ikke på lager
-            </eSeller:If>
-          </div>
-
-          <div class="product-basket">
-            <eSeller:If istrue="Settings:ShowAddToBasket">
-              <div class="etBasket">
-                <eSeller:BasketButton ControlID="btnBasket">
-                  <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
-                </eSeller:BasketButton>
-                <a class="product-basket-button">Tilføj til kurv</a>
-              </div>
-            </eSeller:If>
-          </div>
-
-          <!-- product-details-favorite -->
-          <eSeller:If istrue="Settings:IsLoggedIn">
-            <eSeller:If IsTrue="Product:ShowAddToFavorites">
-              <div class="addToFavorites" style="display:none;">
-                <eSeller:FavoritesButton ControlID="btnFavorites" ><eSeller:Attribute Name="ToolTip" text="tooltip_add_to_product_favorite" />
-                </eSeller:FavoritesButton>
-                <span id="newPInfoAddToFavorites" style="display:none;"><eSeller:Select text="label_new_addToFavourites_btn" /></span>
-              </div>
-              <div class="addToFavoritesBdy">
-                <a class="addToFavoritesLnk"><i class="fa fa-plus-circle"></i>&amp;nbsp;Tilføj til favoritliste</a>
-              </div>
-            </eSeller:If>
-            <eSeller:If IsTrue="Product:ShowRemoveFromFavorites">
-              <div class="removeFromFavorites" style="display:none;">
-                <span class="removeUrl"><eSeller:Select Value-Of="Product:RemoveFromFavoritesUrl" /></span>
-              </div>
-              <div class="removeFromFavoritesBdy">
-                <a class="removeFromFavoritesLnk"><i class="fa fa-minus-circle"></i>&amp;nbsp;Fjern fra din favoritliste</a>
-              </div>
-            </eSeller:If>
-
-            <script type="application/javascript">
-              $('.addToFavoritesLnk').attr('href', $('.addToFavorites span a').attr('href'));
-              var removeFavoriteURL = $('.removeUrl').text();
-              $('.removeFromFavoritesLnk').attr('href', removeFavoriteURL);
-            </script>
           </eSeller:If>
-          <!-- /product-details-favorite -->
-
-          <div class="product-accordion">
-            <ul class="accordion" data-accordion="">
-              <li class="accordion-navigation active">
-                <a href="#faktablad" class="accordion-toggle">Fakta</a>
-                <div id="faktablad" class="content active">
-                  <eSeller:Select Value-Of="Product:ProductShortDescription" />
-                </div>
-              </li>
-
-              <li class="accordion-navigation" style="display: none;">
-                <a class="accordion-toggle">Datablad</a>
-                <div id="datablad" class="content">
-                  Product Documents
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
 
+        <div class="product-variants">
+          <eSeller:Control ControlID="variants" ControlType="VariantSelector" />
+        </div>
+
+        <div class="product-stock">
+          <eSeller:If IsTrue="Product:IsInStock">
+  					<span class="product-in-stock"></span>&amp;nbsp; På lager
+  				</eSeller:If>
+  				<eSeller:If IsTrue="Product:IsNotInStock">
+  					<span class="product-not-in-stock"></span>&amp;nbsp; Ikke på lager
+  				</eSeller:If>
+        </div>
+
+        <div class="product-basket">
+          <eSeller:If istrue="Settings:ShowAddToBasket">
+            <div class="etBasket">
+              <eSeller:BasketButton ControlID="btnBasket">
+                <eSeller:Attribute Name="ToolTip" text="tooltip_add_to_basket" />
+              </eSeller:BasketButton>
+              <a class="product-basket-button">Tilføj til kurv</a>
+            </div>
+          </eSeller:If>
+        </div>
+
+<!-- product-details-favorite -->
+			<eSeller:If istrue="Settings:IsLoggedIn">
+					   <eSeller:If IsTrue="Product:ShowAddToFavorites">
+				<div class="addToFavorites" style="display:none;">
+					<eSeller:FavoritesButton ControlID="btnFavorites" ><eSeller:Attribute Name="ToolTip" text="tooltip_add_to_product_favorite" />
+					</eSeller:FavoritesButton>
+					<span id="newPInfoAddToFavorites" style="display:none;"><eSeller:Select text="label_new_addToFavourites_btn" /></span>
+				</div>
+				<div class="addToFavoritesBdy">
+					<a class="addToFavoritesLnk"><i class="fa fa-plus-circle"></i>&amp;nbsp;Tilføj til favoritliste</a>
+				</div>
+					  </eSeller:If>
+					  <eSeller:If IsTrue="Product:ShowRemoveFromFavorites">
+						   <div class="removeFromFavorites" style="display:none;">
+					<span class="removeUrl"><eSeller:Select Value-Of="Product:RemoveFromFavoritesUrl" /></span>
+				</div>
+							<div class="removeFromFavoritesBdy">
+					<a class="removeFromFavoritesLnk"><i class="fa fa-minus-circle"></i>&amp;nbsp;Fjern fra din favoritliste</a>
+				</div>
+						</eSeller:If>
+
+				<script type="application/javascript">
+					$('.addToFavoritesLnk').attr('href', $('.addToFavorites span a').attr('href'));
+					var removeFavoriteURL = $('.removeUrl').text();
+					$('.removeFromFavoritesLnk').attr('href', removeFavoriteURL);
+				</script>
+			</eSeller:If>
+<!-- /product-details-favorite -->
+
+        <div class="product-accordion">
+          <ul class="accordion" data-accordion="">
+              <li class="accordion-navigation active">
+                <a href="#beskrivelse" class="accordion-toggle">Beskrivelse</a>
+                <div id="beskrivelse" class="content active">
+                  <eSeller:Select Value-Of="Product:ProductLongDescription" />
+                </div>
+              </li>
+            <li class="accordion-navigation">
+              <a href="#faktablad" class="accordion-toggle">Fakta</a>
+              <div id="faktablad" class="content">
+                <eSeller:Select Value-Of="Product:ProductShortDescription" />
+              </div>
+            </li>
+            <li class="accordion-navigation" style="display: none;">
+              <a class="accordion-toggle">Datablad</a>
+              <div id="datablad" class="content">
+                Product Documents
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </div>
+</div>
 
-  <div class="product-related">
-    <h2>Relaterede produkter</h2>
-    <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="True" />
-  </div>
+<div class="product-related">
+  <h2>Relaterede produkter</h2>
+  <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="True" />
+</div>
 </div>
 <div class="content">
   <eSeller:if istrue="Settings:ShowTellAFriend">
@@ -161,9 +166,9 @@
   <eSeller:If istrue="Product:ShowNewItemIcon">
     <eSeller:IfOr istrue="Product:ShowGoodBuyIcon" />
 
-    <!--
-        <eSeller:IfOr isgtzero="Product:BlanketOrderQuantity" />
-    -->
+<!--
+    <eSeller:IfOr isgtzero="Product:BlanketOrderQuantity" />
+-->
     <div id="etIcons">
       <eSeller:Css Name="#etIconsArea" Selector="#etIcons" GroupName="#etgIcons" SelectorGroup="12" />
       <eSeller:Css Name="#etIcons" Selector="#etIcons img" GroupName="#etgIcons" SelectorGroup="26" />
@@ -178,13 +183,13 @@
         </eSeller:shopicon>
       </eSeller:If>
 
-      <!--
-            <eSeller:If isgtzero="Product:BlanketOrderQuantity">
-              <eSeller:shopicon ControlID="imgBlanketOrder" shopicontype="BlanketOrder">
-                <eSeller:Attribute Name="ToolTip" text="label_BlanketOrder" />
-              </eSeller:shopicon>
-            </eSeller:If>
-      -->
+<!--
+      <eSeller:If isgtzero="Product:BlanketOrderQuantity">
+        <eSeller:shopicon ControlID="imgBlanketOrder" shopicontype="BlanketOrder">
+          <eSeller:Attribute Name="ToolTip" text="label_BlanketOrder" />
+        </eSeller:shopicon>
+      </eSeller:If>
+-->
 
     </div>
   </eSeller:If>
@@ -199,9 +204,9 @@
 
   </div>
 
-  <!--
-      <eSeller:Control ControlID="CommentLines" ControlType="ProductCommentLines" />
-  -->
+<!--
+    <eSeller:Control ControlID="CommentLines" ControlType="ProductCommentLines" />
+-->
 
 
   <eSeller:if istrue="Product:hasProductLink">
