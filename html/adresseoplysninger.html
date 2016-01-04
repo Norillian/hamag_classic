@@ -1,28 +1,39 @@
-<div class="page-checkout">
-  <div class="column-2 invoice-address">
-    <h2><eSeller:Select Text="label_invoice_head" TextSourceControlId="Betalingsadresse" /></h2>
-    <eSeller:Control ControlId="Betalingsadresse" ControlType="PaymentAddress" InputMode="Updatable" />
+
+
+<div class="page-checkout content-container">
+  <div class="invoice-address">
+    <h2><eSeller:Select Text="label_invoice_head" TextSourceControlId="Betalingsadresse"  /></h2>
+    <eSeller:Control ControlId="Betalingsadresse" ControlType="PaymentAddress" InputMode="Protected" />
   </div>
-  <div class="column-2 delivery-address">
-    <h2><eSeller:Select Text="label_delivery_head" TextSourceControlId="Leveringsadresse" /></h2>
+  <div class="delivery-address">
+    <h2><eSeller:Select Text="label_delivery_head" TextSourceControlId="Leveringsadresse" InputMode="Updatable" /></h2>
     <div class="delivery-address-enable">
-      <eSeller:Control ControlType="ShipmentAddressCheckbox" ControlId="BrugLeveringsadresseValg"  />
+      <eSeller:Control ControlType="ShipmentAddressCheckbox" ControlId="BrugLeveringsadresseValg" />
     </div>
-    <eSeller:Control ControlId="Leveringsadresse" ControlType="ShipmentAddress" InputMode="Updatable"/>
+    <eSeller:Control ControlId="Leveringsadresse" ControlType="ShipmentAddress"  InputMode="Updatable" />
   </div>
 
   <div class="payment-method">
     <h2><eSeller:Select Text="label_payment_method" TextSourceControlId="Betalingsmåde" /></h2>
-    <eSeller:Control ControlType="PaymentMethodSelect" ControlId="Betalingsmåde" />
+    <div class="selected-method"><eSeller:Control ControlType="PaymentMethodSelect" ControlId="Betalingsmåde" /></div>
   </div>
 
   <div class="delivery-method">
     <h2><eSeller:Select Text="label_delivery_method" TextSourceControlId="Leveringsmåde" /></h2>
-    <eSeller:Control ControlType="ShipmentMethodSelect" ControlId="Leveringsmåde" />
+    <div class="selected-method"><eSeller:Control ControlType="ShipmentMethodSelect" ControlId="Leveringsmåde" /></div>
+    <div class="acceptTermsReadMoreDiv">
+      <a href="#" class="openTermsText">Salgs- og leveringsbetingelser</a>
+    </div>
   </div>
 
   <div class="checkout-navigation">
     <a href="" class="button basket-forward">Færdiggør order</a>
+  </div>
+
+  <div class="TermsTextDiv">
+
+    <span id="closeTermsTop"><i class="fa fa-times"></i></span>
+    <eSeller:Select Value-Of="CmsSpecialPages:Text(&quot;SalesAndDeliveryTerms&quot;)" />
   </div>
 
 </div>
