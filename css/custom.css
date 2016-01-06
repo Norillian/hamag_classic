@@ -37,7 +37,11 @@ form#aspnetForm{
   height:100%!important;
   min-height:100%!important;
 }
-
+.holder:after{
+    display: block;
+    clear: both;
+    content: '';
+}
 h1{
     color: #000000;
     font-size: 30px;
@@ -2495,6 +2499,9 @@ input.measurement-field {
     display: inline-block;
     margin: 0 3px 18px 0;
     width: 35%;
+}
+input.measurement-field.mini-field{
+    width: 15%;
 }
 .field-label{
     font-size: 15px;

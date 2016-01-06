@@ -1,173 +1,237 @@
 <div class="content-container level-measurement">
-    <h1>Bestiling Af IMR</h1>
+    <h1>IMR bestilling</h1>
     <div class="measurement-form">
-        <div class="field-label">Kundenavn</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Tankens placering (adresse, postnr. og by)</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Aftalenr.</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Tanknr.</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">
-            Ekstra aflæsning ud over standard
-            <p class="sub-label">Standard tidspunkt for aflæsning er kl. 03.30. 09.30 og 15.30 ønskes ekstra aflæsning noter vehligst klokkestæt</p>
-        </div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" value="kl." /></div>
+        <div class="field-label">1. Kundenavn<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <div class="field-label">2. Adresse<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <div class="field-label">3. Postnummer<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <div class="field-label">4. By<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <div class="field-label">5. Aftalenummer<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+
         <div class="radio-set">
-            <div class="field-label">Marked Erhverv</div>
+            <div class="field-label">6. Aftaleform (sæt kryds)<span class="requirement"> *</span></div>
             <div class="radio-holder">
-                <input type="radio" class="radio" name="names" value="Jan" id="jan" />
-                <label for="jan">Jan</label>
+                <input type="radio" class="radio" name="names" value="Salg" id="salg" />
+                <label for="salg">Salg</label>
             </div>
             <div class="radio-holder">
-                <input type="radio" class="radio" name="names" value="Per" id="per" />
-                <label for="per">Per</label>
+                <input type="radio" class="radio" name="names" value="Lån" id="lån" />
+                <label for="lån">Lån</label>
             </div>
             <div class="radio-holder">
-                <input type="radio" class="radio" name="names" value="Kristian" id="kristian" />
-                <label for="kristian">Kristian</label>
+                <input type="radio" class="radio" name="names" value="Leje" id="leje" />
+                <label for="leje">Leje</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Andet" id="andet" />
+                <label for="andet">Andet</label>
+            </div>
+        </div>
+
+        <div class="radio-set">
+            <div class="field-label">7. Vælg marked:<span class="requirement"> *</span></div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Transport" id="transport" />
+                <label for="transport">Transport</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Industri" id="industri" />
+                <label for="industri">Industri</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Erhverv" id="erhverv" />
+                <label for="erhverv">Erhverv</label>
+            </div>
+            <p class="sub-label">Hvis "Erhverv" vælges -> Vælg gruppe:</p>
+        </div>
+
+        <div class="radio-set">
+            <div class="field-label">7.a Vælg gruppe:</div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Betina" id="betina" />
+                <label for="betina">Betina</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="names" value="Claus" id="claus" />
                 <label for="claus">Claus</label>
             </div>
             <div class="radio-holder">
-                <input type="radio" class="radio" name="names" value="Betina" id="betina" />
-                <label for="betina">Betina</label>
+                <input type="radio" class="radio" name="names" value="Jan" id="jan" />
+                <label for="jan">Jan</label>
             </div>
             <div class="radio-holder">
-                <input type="radio" class="radio" name="names" value="øvrige" id="øvrige" />
-                <label for="øvrige">øvrige</label>
+                <input type="radio" class="radio" name="names" value="Kristian" id="kristian" />
+                <label for="kristian">Kristian</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Per" id="per" />
+                <label for="per">Per</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="Søren" id="søren" />
+                <label for="søren">Søren</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="names" value="UTM" id="utm" />
+                <label for="utm">UTM</label>
             </div>
         </div>
+
+        <div class="field-label">8. Kontaktperson<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <div class="field-label">9. Kontaktperson tlf.<span class="requirement"> *</span></div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <div class="field-label">10. Tankens placering på stedet</div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <div class="field-label">11. Tanknr.</div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+
         <div class="radio-set">
-            <div class="field-label">Marked Transport</div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="transport" id="transport" />
-            </div>
-        </div>
-        <div class="radio-set">
-            <div class="field-label">Marked Industri</div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="industri" id="industri" />
-            </div>
-        </div>
-        <div class="radio-set">
-            <div class="field-label">Tank definition</div>
-            <p class="sub-label">Vælg tank</p>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="1200Oval" id="oval" />
-                <label for="oval">1200 Oval</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="1500Cylindisk" id="cylindisk" />
-                <label for="cylindisk">1500 Cylindisk</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="1800Oval" id="oval1" />
-                <label for="oval1">1800 Oval</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="2500Cylindisk" id="cylindisk1" />
-                <label for="cylindisk1">2500 Cylindisk</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="4000Cylindisk" id="cylindisk2" />
-                <label for="cylindisk2">4000 Cylindisk</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="5900Cylindisk" id="cylindisk3" />
-                <label for="cylindisk3">5900 Cylindisk</label>
-            </div>
-            <div class="radio-holder">
-                <input type="radio" class="radio" name="tank" value="ikke" id="ikke" />
-                <label for="ikke">Ikke en af ovenstaende (udfyld venligst en af nedenstaende)</label>
-            </div>
-        </div>
-        <div class="field-label">Anden cylindisk tank</div>
-        <p class="sub-label">Har du kikket en af ovenstaende tanke af, skal du blot sætte en streg i dette felt</p>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Anden firkantet tank</div>
-        <p class="sub-label">Har du kikket en af ovenstaende tanke af, skal du blot sætte en streg i dette felt</p>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="radio-set">
-            <div class="field-label">Volume af tank</div>
-            <p class="sub-label">Produktnavn</p>
+            <div class="field-label">12. Vælg hvilket produkt der er i tanken:<span class="requirement"> *</span></div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume1" id="vol1" />
-                <label for="vol1">v.nr. 108/Fyingsolie Plus - 0.84</label>
+                <label for="vol1">v.nr.108/Fyringsolie Plus</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume2" id="vol2" />
-                <label for="vol2">v.nr. 116/Fyingsolie Basis - 0.845</label>
+                <label for="vol2">v.nr.110/Fyringsolie uden afgift</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume3" id="vol3" />
-                <label for="vol3">v.nr. 200/Landbrugsdiesel - 0.84</label>
+                <label for="vol3">v.nr.116/Fyringsolie Basis</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume4" id="vol4" />
-                <label for="vol4">v.nr. 230/Transportdiesel - 0.8325</label>
+                <label for="vol4">v.nr.200/Landbrugsdiesel</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume5" id="vol5" />
-                <label for="vol5">v.nr. 233/Transportdiesel uden fgift- 0.8325</label>
+                <label for="vol5">v.nr.230/Transportdiesel</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume6" id="vol6" />
-                <label for="vol6">v.nr. 251/Off Road Diesel - 0.84</label>
+                <label for="vol6">v.nr.233/Transportdiesel uden afgift</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume7" id="vol7" />
-                <label for="vol7">v.nr. 515/Blyfri 95 Benzin - 0.750</label>
+                <label for="vol7">v.nr.251/Off Road Diesel</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="volume" value="volume8" id="vol8" />
-                <label for="vol8">v.nr. 35430/Mobil DTE 25 - 0.876</label>
+                <label for="vol8">v.nr.515/Blyfri 95 Benzin</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="volume" value="volume9" id="vol9" />
+                <label for="vol9">Andet</label>
+            </div>
+            <p class="sub-label">Hvis "Andet" vælges -> udfyld</p>
+            <div class="field-label">Varenummer: </div>
+            <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" style="margin-bottom: 6px;" /></div>
+            <div class="field-label">Produktnavn: </div>
+            <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        </div>
+
+        <div class="radio-set">
+            <div class="field-label">13. Vælg tank størrelse og form<span class="requirement"> *</span> (enten a eller b)</div>
+            <div class="field-label">13.a Ved standard tank, vælg en af følgende:</div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="1200Oval" id="oval" />
+                <label for="oval">1200 Oval tank</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="1800Oval" id="oval1" />
+                <label for="oval1">1800 Oval tank</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="2500Cylindisk" id="cylindisk1" />
+                <label for="cylindisk1">2500 Cylindisk tank</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="4000Cylindisk" id="cylindisk2" />
+                <label for="cylindisk2">4000 Cylindisk tank</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="5900Cylindisk" id="cylindisk3" />
+                <label for="cylindisk3">5900 Cylindisk tank</label>
             </div>
         </div>
-        <div class="field-label">Niveau for genopfyldining(LOW)</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Email adresse for alarm veg genopfyldningsniveau</div>
-        <p class="sub-label">Ud over gruppe</p>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" value="@" /></div>
-        <div class="field-label">SMS - tlf. nr. for alarm ved genopfyldningsniveau</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
-        <div class="field-label">Niveau for kritisk niveau (LOWLOW)</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
-        <div class="field-label">Email adresse for alarm kritisk niveau</div>
-        <p class="sub-label">Udover de eksisterende Email adresser.</p>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" value="@" /></div>
-        <div class="field-label">SMS - tlf. nr. for alarm ved kritisk niveau</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
-        <div class="field-label">Email adresse for daglig driftsapport</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" value="@" /></div>
+        <div class="field-label">13.b Hvis ikke standard tank udfyld følgende:</div>
+        <div class="field-label">Volumen: </div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <div class="field-label">Højde: </div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <div class="field-label">Bredde: </div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <div class="field-label">Længde: </div>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
         <div class="radio-set">
-            <div class="field-label">IMR ønsker</div>
+            <div class="field-label">Form (firkantet, oval, cylindrisk, andet):</div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Firkantet" id="firkantet" />
+                <label for="firkantet">Firkantet</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Oval" id="formOval" />
+                <label for="formOval">Oval</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Cylindrisk" id="formCylindrisk" />
+                <label for="formCylindrisk">Cylindrisk</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Andet" id="andetForm" />
+                <label for="andetForm">Andet</label>
+            </div>
+        </div>
+
+        <div class="radio-set">
+            <div class="field-label">Type</div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Underjordisk tank" id="underjordisk" />
+                <label for="underjordisk">Underjordisk tank</label>
+            </div>
+            <div class="radio-holder">
+                <input type="radio" class="radio" name="tank" value="Overjordisk tank" id="overjordisk" />
+                <label for="overjordisk">Overjordisk tank</label>
+            </div>
+        </div>
+
+        <div class="field-label">14. Alarmniveau Low</div>
+        <p class="sub-label">a. Genopfyldningsniveau i liter<span class="requirement"> *</span></p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <p class="sub-label">b. Email modtager ud over gruppe</p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <p class="sub-label">c. SMS modtager ud over gruppe og OK</p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+
+        <div class="field-label">15. Alarmniveau Lowlow</div>
+        <p class="sub-label">a. Kritisk niveau i liter<span class="requirement"> *</span></p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field mini-field" /></div>
+        <p class="sub-label">b. Email modtager ud over gruppe og OK</p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+        <p class="sub-label">c. SMS modtager ud over gruppe og OK</p>
+        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
+
+        <div class="radio-set">
+            <div class="field-label">16. Opsætning<span class="requirement"> *</span></div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="imr" value="imr1" id="imr1" />
-                <label for="imr1">IMR ønsker sendt til kunde, der selv monterer</label>
+                <label for="imr1">IMR skal sendes til kunden der selv opsætter</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="imr" value="imr2" id="imr2" />
-                <label for="imr2">IMR ønsker monterer pa eksisterende tank</label>
+                <label for="imr2">IMR skal opsættes af Hamag</label>
             </div>
             <div class="radio-holder">
                 <input type="radio" class="radio" name="imr" value="imr3" id="imr3" />
-                <label for="imr3">IMR ønsker monterer pa fabriksny tank</label>
+                <label for="imr3">IMR skal opsættes på ny tank købt på ordrenummer:</label>
+                <input type="text" class="measurement-field mini-field" />
             </div>
         </div>
-        <div class="field-label">Ved monetering pa fabriksny tank indtast LD ordrenummer</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
-        <div class="field-label">Kontaktperson</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Kontakt telefon nr.</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /><span class="requirement">*</span></div>
-        <div class="field-label">Bestillers email adresse</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" value="@" /><span class="requirement">*</span></div>
-        <div class="field-label">Bemærkninger</div>
-        <div class="measurement-field-box"><input type="text" class="measurement-field" /></div>
         <a href="#" class="button button-send">Send</a>
     </div>
 </div>
