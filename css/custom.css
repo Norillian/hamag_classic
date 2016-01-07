@@ -585,7 +585,11 @@ a.homeButton i {
 }
 
 .content-container.used-tanks{
-    padding-top: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+.content-container.used-tanks > div > span{
+    display: none;
 }
 #ShopContent .content-container.used-tanks .plistAreaHeader > div{
     overflow: hidden;
@@ -678,8 +682,8 @@ a.homeButton i {
     min-height: 190px;
 }
 #ShopContent .plistAreaHeader > div .prelement .prmain .primg a img{
-    min-height: 100px;
-    min-width: 100px;
+    min-height: 70px;
+    min-width: 30px;
     vertical-align: middle;
     min-height: 190px;
 }
