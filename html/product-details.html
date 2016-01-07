@@ -147,7 +147,32 @@
 
 <div class="product-related">
   <h2>Relaterede produkter</h2>
-  <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="True" />
+  <div class="suplemented-products-bdy">
+      <ul class="tabs suplemented-product-tabs" data-tab="" role="tablist">
+          <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" aria-controls="panel2-1">Monterede pumpesæt</a></li>
+          <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-2">Tællere monteret</a></li>
+          <li class="tab-title" role="presentation"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-3">Filter monteret</a></li>
+          <li class="tab-title" role="presentation"><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-4">Tanksikring monteret</a></li>
+          <li class="tab-title" role="presentation"><a href="#panel2-5" role="tab" tabindex="0" aria-selected="false" aria-controls="panel2-5">Øvrigt udstyr</a></li>
+      </ul>
+      <div class="tabs-content suplemented-product-tabs-contents">
+          <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+              <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts1" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="False" />
+          </section>
+          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+              <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts2" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="False" />
+          </section>
+          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+              <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts3" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="False" />
+          </section>
+          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
+              <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts4" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="False" />
+          </section>
+          <section role="tabpanel" aria-hidden="true" class="content" id="panel2-5">
+              <eSeller:Control ControlType="ProductList" ControlID="RelatedProducts5" DataProvider="eSeller.DataProvider.ProductList.RelatedProducts" IsMainProductList="False" />
+          </section>
+      </div>
+  </div>
 </div>
 </div>
 <div class="content">
@@ -233,3 +258,28 @@
 <eSeller:if istrue="Product:isConfiguredProduct">
   <eSeller:Control ControlID="productconf" ControlType="ProductConfiguration" />
 </eSeller:if>
+
+<script type="text/javascript">
+    $( ".suplemented-product-tabs-contents .Tabular tr" ).each(function( index ) {
+        a2bNewTd = $('<td></td>');
+        a2bNewTd.addClass('a2bNewTd');
+        a2bNewInput = $('<i></i>');
+        a2bNewTd.append(a2bNewInput);
+
+        $(this).prepend(a2bNewTd);
+    });
+
+    $( ".suplemented-product-tabs-contents .Tabular tr td.ExtProductID" ).each(function( index ) {
+        copyExtId = $(this).children('a').text();
+        $(this).parent().children('.ProductName').append('<br />');
+        $(this).parent().children('.ProductName').append('<span></span>');
+        $(this).parent().children('.ProductName').children('span').append(copyExtId);
+    });
+
+    $( ".suplemented-product-tabs-contents td.a2bNewTd i" ).click(function() {
+        if(!$('#panel2-4').hasClass('active')) {
+            $(this).parent().parent().parent().children('tr').children('td').children('i.active').removeClass('active');
+        }
+        $(this).toggleClass('active');
+    });
+</script>

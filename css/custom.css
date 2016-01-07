@@ -387,6 +387,11 @@ a.homeButton i {
     background: #FFFFFF;
 }
 
+.content-container.used-tanks {
+    padding: 0;
+    border: medium none;
+}
+
 .fullcontentBdy .contentPane {
     width: 100%;
 }
@@ -670,6 +675,7 @@ a.homeButton i {
     padding: 0.9375rem;
     display: block;
     vertical-align: middle;
+    min-height: 190px;
 }
 
 #ShopContent .plistAreaHeader > div .prelement .prmain p {
@@ -1279,10 +1285,10 @@ h1.product-title{
 
 .product-related h2,
 .relatedProducts-tabs h3{
-  margin: 20px 0 5px 15px;
   color: #333333;
   font-size: 30px;
   font-weight:normal;
+  font-weight: bold;
 }
 
 .product-related .prelement{
@@ -1705,8 +1711,9 @@ table tr:nth-of-type(even){
 
 .basket-total{
   float:right;
-  padding:0;
+  padding:0 78px 0 0;
   width:400px;
+  max-width: 400px;
 }
 #main #ShopContent #ec38 .ec38TableTotals{
   display:block;
@@ -2583,4 +2590,124 @@ p.sub-label{
     background: #ffffff;
     border: 1px solid #d0cfcf;
     padding: 6px;
+}
+
+.suplemented-product-tabs {
+    border-left: solid 1px #cbcaca;
+}
+
+.suplemented-product-tabs li {
+    padding: 0 0 !important;
+    border: solid 1px #cbcaca;
+    border-left: medium none;
+    border-bottom: medium none;
+}
+
+.suplemented-product-tabs li,
+.suplemented-product-tabs li a {
+    font-size: 14px !important;
+    font-weight: bold;
+    color: #333333 !important;
+    display: inline-block !important;
+    line-height: 60px;
+    background-color: transparent !important;
+}
+
+.suplemented-product-tabs li a {
+    padding: 0 19px !important;
+}
+
+.suplemented-product-tabs li.active {
+    background-color: #fff !important;
+}
+
+.suplemented-product-tabs-contents {
+    border: solid 1px #cbcaca;
+    background-color: #fff;
+}
+
+.suplemented-product-tabs-contents .content {
+    padding: 0;
+}
+
+.suplemented-product-tabs-contents .prelement {
+    display: block;
+    width: 100% !important;
+    border: medium none !important;
+}
+
+#ShopContent .suplemented-product-tabs-contents .plistAreaHeader > div,
+#ShopContent .suplemented-product-tabs-contents .plistAreaHeader > div .prelement .prmain {
+    border: medium none !important;
+}
+
+#ShopContent .suplemented-product-tabs-contents .plistAreaHeader > div .prelement > div {
+    display: inline-block;
+}
+
+.suplemented-product-tabs-contents th,
+.suplemented-product-tabs-contents td {
+    display: none;
+    border-bottom: solid 1px #cbcaca;
+    border-left: solid 1px #cbcaca;
+    vertical-align: top;
+    text-align: left !important;
+}
+
+.suplemented-product-tabs-contents td.Image,
+.suplemented-product-tabs-contents td.ProductName,
+.suplemented-product-tabs-contents td.SalesPrice,
+.suplemented-product-tabs-contents td.a2bNewTd {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left !important;
+}
+
+.suplemented-product-tabs-contents thead .a2bNewTd {
+    display: none;
+}
+
+.suplemented-product-tabs-contents tr .a2bNewTd {
+    vertical-align: middle;
+    text-align: center !important;
+    width: 73px;
+}
+
+.suplemented-product-tabs-contents table {
+    width: 100%;
+}
+
+.suplemented-product-tabs-contents td.Image {
+    width: 120px;
+}
+
+.suplemented-product-tabs-contents td.ProductName a {
+    color: #333333 !important;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.suplemented-product-tabs-contents td.ProductName span {
+    color: #666666;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.suplemented-product-tabs-contents td.SalesPrice a {
+    font-weight: bold;
+    font-size: 18px;
+    color: #074380 !important;
+}
+
+.suplemented-product-tabs-contents td.a2bNewTd i {
+    background-image: url('/images/editor/images/hamag-ok-pi-uncheck.jpg');
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    display: block;
+    margin: 0 auto;
+}
+
+.suplemented-product-tabs-contents td.a2bNewTd i.active {
+    background-image: url('/images/editor/images/hamag-ok-pi-checked.jpg');
 }
