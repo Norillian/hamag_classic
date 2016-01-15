@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
-
+	//Mega menu
+	$('#StanderePumperdropDown .innerDropdown > .wrapper-item >li>a').click(function(event) {
+		event.preventDefault();	
+		return false;
+	});
   // Product Details Accordion script
   $('.accordion-navigation').each(function(){
     var target = $(this);

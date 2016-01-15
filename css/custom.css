@@ -193,6 +193,7 @@ a.homeButton i {
     font-size: 18px;
     font-family: 'Roboto', Arial, sans-serif;
     color: #333333;
+	cursor:default;
 }
 
 
@@ -502,6 +503,7 @@ a.homeButton i {
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.82);
     clear: both;
     font-weight: normal;
+	display: none;
 }
 
 #pMenuSublevels #pMenuSublevelsbdy {
@@ -527,17 +529,54 @@ a.homeButton i {
     font-family: FontAwesome;
 }
 
-#pMenuSublevels #pMenuSublevelsbdy ul li a.active {
-    font-weight: bold;
-    color: #000000;
+#pMenuSublevels #pMenuSublevelsbdy ul li a.active:before {
+	color: #000;
 }
 
-#pMenuSublevels #pMenuSublevelsbdy ul li #pMenuSublevelsl2 li a {
-    padding: 10px 0 10px 20px;
+#pMenuSublevels #pMenuSublevelsbdy  #pMenuSublevelsl1  li a{
+	display: none;
+}
+
+#pMenuSublevels #pMenuSublevelsbdy #pMenuSublevelsl1  li a.active {
+    font-weight: bold;
+    color: #000000;
+	display: block;
+}
+
+#pMenuSublevels #pMenuSublevelsbdy #pMenuSublevelsl1  li a.active + ul li a{
+	display: block;
+}
+
+
+#pMenuSublevels #pMenuSublevelsbdy #pMenuSublevelsl1  li #pMenuSublevelsl2 li a {
+    padding: 10px 0 10px 40px;
 }
 
 #pMenuSublevels #pMenuSublevelsbdy ul li #pMenuSublevelsl2 li #pMenuSublevelsl3 li a {
     padding: 10px 0 10px 30px;
+}
+
+#pMenuSublevels #pMenuSublevelsbdy  #pMenuSublevelsl1  > li > a.active{
+	background: #0f416f;
+	color: #ffffff;
+	line-height: 40px;
+	margin: 0;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 0 0 0 10px;
+	font-size: 18px;
+	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.82);
+	clear: both;
+	font-weight: normal;
+}
+
+#pMenuSublevels #pMenuSublevelsbdy  #pMenuSublevelsl1  > li > a.active:before{
+	padding: 0;
+	content:'';
+}
+
+.product-filter h2.header-title:first-child{
+	display: none;
 }
 
 #ucMenuNamebdy {
@@ -585,11 +624,7 @@ a.homeButton i {
 }
 
 .content-container.used-tanks{
-    padding: 0 !important;
-    border: none !important;
-}
-.content-container.used-tanks > div > span{
-    display: none;
+    padding-top: 0 !important;
 }
 #ShopContent .content-container.used-tanks .plistAreaHeader > div{
     overflow: hidden;
@@ -678,15 +713,10 @@ a.homeButton i {
 #ShopContent .plistAreaHeader > div .prelement .prmain .primg a {
     padding: 0.9375rem;
     display: block;
-    height: 100%;
-    min-height: 190px;
-}
-#ShopContent .plistAreaHeader > div .prelement .prmain .primg a img{
-    min-height: 70px;
-    min-width: 30px;
     vertical-align: middle;
     min-height: 190px;
 }
+
 #ShopContent .plistAreaHeader > div .prelement .prmain p {
     font-size: 11px;
     color: #666666;
