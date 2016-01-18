@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	//Mega menu
-	$('#StanderePumperdropDown .innerDropdown > .wrapper-item >li>a').click(function(event) {
+	$('#StanderePumperdropDown .innerDropdown > .wrapper-item >li>a, #pMenuSublevels #pMenuSublevelsbdy #pMenuSublevelsl1 > li > a.active').click(function(event) {
 		event.preventDefault();	
 		return false;
 	});
