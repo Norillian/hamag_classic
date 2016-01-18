@@ -568,6 +568,7 @@ a.homeButton i {
 	text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.82);
 	clear: both;
 	font-weight: normal;
+	cursor: default;
 }
 
 #pMenuSublevels #pMenuSublevelsbdy  #pMenuSublevelsl1  > li > a.active:before{
