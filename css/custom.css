@@ -372,6 +372,11 @@ a.homeButton i {
     background: #ffffff;
     position: relative;
 }
+.product-stock, 
+.productStockStatusDiv, 
+.product-bdy .stock-status {
+	display: none;
+}
 #leftPane{
     margin-right: -1px !important;
 }
