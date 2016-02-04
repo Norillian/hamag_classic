@@ -372,6 +372,11 @@ a.homeButton i {
     background: #ffffff;
     position: relative;
 }
+.product-stock,
+.productStockStatusDiv,
+.product-bdy .stock-status {
+    display: none;
+}
 #leftPane{
     margin-right: -1px !important;
 }
@@ -903,12 +908,15 @@ p.sub-login-text{
 /*** customer Menu styles ***/
 
 .salespersonMenuInnerBdy {
-    text-align: right;
-    margin-right: 14px;
 }
 
 .salespersonMenuInnerBdy i {
     margin-right: 5px;
+    font-size: 16px;
+}
+.salespersonMenuInnerBdy #customerMenuInner,
+.salespersonMenuInnerBdy #EmployeeMenuItem{
+    float: right;
 }
 
 .salespersonMenuInnerBdy span {
@@ -1267,7 +1275,6 @@ h1.product-title{
     color: #333333;
     font-size: 16px;
     font-weight: bold;
-    font-weight: bold;
 }
 
 .product-tabs section h3.section-title{
@@ -1327,7 +1334,6 @@ h1.product-title{
 .relatedProducts-tabs h3{
   color: #333333;
   font-size: 30px;
-  font-weight:normal;
   font-weight: bold;
 }
 
@@ -1340,7 +1346,9 @@ h1.product-title{
 .customerMenuBdy {
     position: relative;
 }
-
+.login-member-info{
+    cursor: pointer;
+}
 .customerDropdown {
     background-color: #fff;
     width: 308px;
@@ -1351,6 +1359,7 @@ h1.product-title{
     box-shadow: 4px 6px 13px -4px #919291;
     border-top: medium none;
     padding: 5px;
+    top: 44px;
 }
 
 .customerDropdown.active {
