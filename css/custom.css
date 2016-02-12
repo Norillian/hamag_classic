@@ -2760,3 +2760,24 @@ p.sub-label{
 .suplemented-product-tabs-contents td.a2bNewTd i.active {
     background-image: url('/images/editor/images/hamag-ok-pi-checked.jpg');
 }
+
+.EmployeeInfo {
+    padding: 10px;
+}
+
+.EmployeeInfo > div.EmployeeInfo-content {
+    display: block;
+}
+
+.EmployeeInfo > div.EmployeeInfo-content > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.EmployeeInfo > h3 {
+    display: block;
+    width: 100%;
+}
