@@ -1,0 +1,33 @@
+<style type="text/css">
+.search-results-header {
+padding: 10px 10px 0px 10px;
+background-color:#fff;
+border: 1px solid #d0cfcf;
+}
+</style>
+<div class="search-results-header">
+    <h1>Din søgning på [0] gav [1] resultater:</h1>
+</div>
+<script type="text/javascript">
+$( document ).ready(function() {
+  var val = window.location.href;
+val = val.replace("%c3%b8", "ø");
+val = val.replace("%c3%98", "Ø");
+val = val.replace("%c3%a5", "å");
+val = val.replace("%C3%85", "Å");
+val = val.replace("%c3%a6", "æ");
+val = val.replace("%c3%86", "Æ");
+val = '"' + val.substr(val.indexOf("=") + 1) + '"';
+
+var newSearchText = $('.search-results-header h1').text();
+newSearchText = newSearchText.replace("[0]", val);
+if($(".prelement").length > 0) {
+newSearchText = newSearchText.replace("[1]", "disse");
+}
+else {
+newSearchText = newSearchText.replace("[1]", "ingen");
+}
+
+$('.search-results-header h1').text(newSearchText);
+});
+</script>
