@@ -1,8 +1,11 @@
 
 $(document).ready(function(){
+
+	$('.customPmenuLeftPane li a:contains("Type3menu")').parent().hide();
+
 	//Mega menu
 	$('#StanderePumperdropDown .innerDropdown > .wrapper-item >li>a, #pMenuSublevels #pMenuSublevelsbdy #pMenuSublevelsl1 > li > a.active').click(function(event) {
-		event.preventDefault();	
+		event.preventDefault();
 		return false;
 	});
   // Product Details Accordion script
