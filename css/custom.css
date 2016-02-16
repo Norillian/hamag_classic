@@ -221,12 +221,17 @@ a.homeButton i {
     display: block;
     width: 100%;
 }
-#topMenu ul.f-dropdown > div li > ul > li a{
+#topMenu ul.f-dropdown > div li > ul > li a,
+.innerDropdown.holder > li > a {
     font-family: 'Roboto', Arial, sans-serif;
     color: #666666;
     padding: 1px 0;
 }
-#topMenu ul.f-dropdown > div li > ul > li a:before{
+#BrugtetankeogudstyrdropDown > div {
+    padding: 20px 10px !important;
+}
+#topMenu ul.f-dropdown > div li > ul > li a:before,
+.innerDropdown.holder > li > a:before{
     font-family: FontAwesome;
     content: "\f105";
     padding-right: 4px;
