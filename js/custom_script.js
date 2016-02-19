@@ -90,4 +90,22 @@ $(document).ready(function(){
     $('#ShopContent').css('padding-bottom', '0');
   });
 
+	// Iframe Check
+	var searchQuery = location.search;
+	var iframeParam = '';
+
+	if(searchQuery.length > 0 && searchQuery.indexOf('iframe')){
+
+		iframeParam = searchQuery.split('?')[1].split('=');
+
+		if(iframeParam[0] == 'iframe' && iframeParam[1] == 'true'){
+			$('body').addClass('page-iframed');
+		}
+
+	}else if(top.location!= self.location) {
+
+		 top.location = self.location.href;
+
+	}
+
 });

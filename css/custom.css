@@ -2786,3 +2786,46 @@ p.sub-label{
     display: block;
     width: 100%;
 }
+
+/* Iframe Check */
+
+.page-iframed #outerBdy {
+  background:none;
+}
+
+.page-iframed #main {
+  width:100%;
+}
+
+.page-iframed .topMenuOuterBdy{
+  display:none;
+}
+
+.page-iframed #cmsLoginPage{
+  display:none;
+}
+
+.page-iframed .customerLoginBdy{
+  border:0;
+  box-shadow:0 0 0 0;
+  width:100%;
+}
+
+.page-iframed #customerLogin{
+  margin:0;
+}
+
+.page-iframed #customerLogin table label{
+  font-family:Tahoma, Arial, sans-serif !important;
+}
+
+.page-iframed #customerLogin .button,
+.page-iframed #customerLogin .button:hover{
+  margin-top:5px;
+  border-top:solid 1px #dcdcda;
+}
+
+.page-iframed input[type="text"],
+.page-iframed input[type="password"]{
+  box-shadow:none;
+}
