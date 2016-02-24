@@ -1,4 +1,4 @@
-/*** Hamag OK Classic shop custom css * **/
+/*** Hamag OK Classic shop custom css ***/
 
 body,
 a,
@@ -139,10 +139,10 @@ a.homeButton i {
     display: inline-block;
 }
 #main #topMenu ul.customPmenuLeftPane > li > a {
-    padding: 0px 22px !important;
+    padding: 0px 12px !important;
     line-height: 51px;
     color: #ffffff !important;
-    font-size: 20px !important;
+    font-size: 18px !important;
     border: medium none !important;
     text-decoration: none !important;
     border-right: solid 1px #0c355b !important;
@@ -221,12 +221,17 @@ a.homeButton i {
     display: block;
     width: 100%;
 }
-#topMenu ul.f-dropdown > div li > ul > li a{
+#topMenu ul.f-dropdown > div li > ul > li a,
+.innerDropdown.holder > li > a {
     font-family: 'Roboto', Arial, sans-serif;
     color: #666666;
     padding: 1px 0;
 }
-#topMenu ul.f-dropdown > div li > ul > li a:before{
+#BrugtetankeogudstyrdropDown > div {
+    padding: 20px 10px !important;
+}
+#topMenu ul.f-dropdown > div li > ul > li a:before,
+.innerDropdown.holder > li > a:before{
     font-family: FontAwesome;
     content: "\f105";
     padding-right: 4px;
@@ -372,10 +377,10 @@ a.homeButton i {
     background: #ffffff;
     position: relative;
 }
-.product-stock, 
-.productStockStatusDiv, 
+.product-stock,
+.productStockStatusDiv,
 .product-bdy .stock-status {
-	display: none;
+    display: none;
 }
 #leftPane{
     margin-right: -1px !important;
@@ -908,12 +913,15 @@ p.sub-login-text{
 /*** customer Menu styles ***/
 
 .salespersonMenuInnerBdy {
-    text-align: right;
-    margin-right: 14px;
 }
 
 .salespersonMenuInnerBdy i {
     margin-right: 5px;
+    font-size: 16px;
+}
+.salespersonMenuInnerBdy #customerMenuInner,
+.salespersonMenuInnerBdy #EmployeeMenuItem{
+    float: right;
 }
 
 .salespersonMenuInnerBdy span {
@@ -1272,7 +1280,6 @@ h1.product-title{
     color: #333333;
     font-size: 16px;
     font-weight: bold;
-    font-weight: bold;
 }
 
 .product-tabs section h3.section-title{
@@ -1328,11 +1335,20 @@ h1.product-title{
   display:block;
 }
 
+.product-related.active h2{
+	display: block !important;
+}
+
+.products .productInnerDiv{
+	min-height: 363px;
+	margin:0 !important;
+}
+
 .product-related h2,
 .relatedProducts-tabs h3{
   color: #333333;
   font-size: 30px;
-  font-weight:normal;
+  margin: 28px 0 5px 0;
   font-weight: bold;
 }
 
@@ -1345,7 +1361,9 @@ h1.product-title{
 .customerMenuBdy {
     position: relative;
 }
-
+.login-member-info{
+    cursor: pointer;
+}
 .customerDropdown {
     background-color: #fff;
     width: 308px;
@@ -1356,6 +1374,7 @@ h1.product-title{
     box-shadow: 4px 6px 13px -4px #919291;
     border-top: medium none;
     padding: 5px;
+    top: 44px;
 }
 
 .customerDropdown.active {
@@ -2755,4 +2774,68 @@ p.sub-label{
 
 .suplemented-product-tabs-contents td.a2bNewTd i.active {
     background-image: url('/images/editor/images/hamag-ok-pi-checked.jpg');
+}
+
+.EmployeeInfo {
+    padding: 10px;
+}
+
+.EmployeeInfo > div.EmployeeInfo-content {
+    display: block;
+}
+
+.EmployeeInfo > div.EmployeeInfo-content > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.EmployeeInfo > h3 {
+    display: block;
+    width: 100%;
+}
+
+/* Iframe Check */
+
+.page-iframed #outerBdy {
+  background:none;
+}
+
+.page-iframed #main {
+  width:100%;
+}
+
+.page-iframed .topMenuOuterBdy{
+  display:none;
+}
+
+.page-iframed #cmsLoginPage{
+  display:none;
+}
+
+.page-iframed .customerLoginBdy{
+  border:0;
+  box-shadow:0 0 0 0;
+  width:100%;
+}
+
+.page-iframed #customerLogin{
+  margin:0;
+}
+
+.page-iframed #customerLogin table label{
+  font-family:Tahoma, Arial, sans-serif !important;
+}
+
+.page-iframed #customerLogin .button,
+.page-iframed #customerLogin .button:hover{
+  margin-top:5px;
+  border-top:solid 1px #dcdcda;
+}
+
+.page-iframed input[type="text"],
+.page-iframed input[type="password"]{
+  box-shadow:none;
 }
