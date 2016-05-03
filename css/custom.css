@@ -711,6 +711,19 @@ a.homeButton i {
     margin: 10px 0;
 }
 
+#ShopContent .plistAreaHeader > div .prelement .prbasket .prbpri{
+  margin-top:-10px;
+  margin-bottom:-10px;
+  font-size:12px;
+  text-decoration: line-through;
+}
+
+.product-price .price-previous{
+  display:block;
+  margin-bottom:10px;
+  text-decoration: line-through;
+}
+
 #ShopContent .plistAreaHeader > div .prelement .prmain .hlink {
     color: #333333;
     font-size: 18px;
@@ -2806,6 +2819,8 @@ p.sub-label{
 .page-iframed #main {
   width:100%;
 }
+
+
 
 .page-iframed .topMenuOuterBdy{
   display:none;
