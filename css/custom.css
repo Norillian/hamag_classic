@@ -2842,6 +2842,18 @@ p.sub-label{
 
 .page-iframed #customerLogin table label{
   font-family:Tahoma, Arial, sans-serif !important;
+  font-size: 12px;
+  color: #333333;
+  position: relative;
+  width: 100%;
+  display: block;
+  min-height: 29px;
+  text-align: left;
+  padding-top: 3px;
+}
+
+.page-iframed #customerLogin table tr td{
+  padding:0!important;
 }
 
 .page-iframed #customerLogin .button,
@@ -2850,7 +2862,33 @@ p.sub-label{
   border-top:solid 1px #dcdcda;
 }
 
-.page-iframed input[type="text"],
-.page-iframed input[type="password"]{
+.page-iframed #customerLogin table input[type="button"]{
+  max-height:31px;
+  margin-top:10px;
+  line-height:15px;
+}
+.page-iframed #customerLogin li a{
+  bottom:23px;
+  float:left;
+  right:0;
+  padding-left:3px;
+  color: #666666;
+  font-family: Tahoma, Arial, sans-serif !important;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: underline;
+}
+
+.page-iframed #customerLogin input[type="text"],
+.page-iframed #customerLogin input[type="password"]{
   box-shadow:none;
+  width: 100%;
+  border: solid 1px #dddddb;
+  margin: 0;
+  margin-top:-4px;
+  line-height: 24px;
+  height: 24px;
+  max-width:211px;
+  background: #FFFFFF;
+  padding: 0 5px;
 }
